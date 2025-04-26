@@ -32,3 +32,22 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #0f7065; /* Darker shade of primary for hover */
 }
+
+/* 6. Styles for Project Section Preview */
+.project-description {
+    /* Volver a max-height para truncar flexiblemente */
+    max-height: 280px; /* Ajusta esta altura según necesites */
+    overflow: hidden;
+    position: relative; /* Mantenido por si acaso */
+    transition: max-height 0.5s ease-in-out; /* Transición suave (aunque ya no se expande aquí) */
+}
+
+.open-project-modal {
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Estilos del Modal (Tailwind maneja la mayoría) */
+#project-modal .bg-white {
+    /* Clases de Tailwind (max-h-[90vh] overflow-hidden flex flex-col) manejan esto */
+}
