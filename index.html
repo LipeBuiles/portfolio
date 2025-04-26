@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Felipe Builes - Product Manager</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#128c7e",
+                        accent: "#f95738",
+                        "text-dark": "#000010",
+                        "bg-light": "#dfeae2",
+                        "bg-dark": "#000010",
+                        "bg-white": "#ffffff",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-bg-light text-text-dark font-sans">
+    <nav id="main-nav" class="bg-white shadow-sm sticky top-0 z-50 transition-colors duration-300 ease-in-out">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a class="font-bold text-xl text-primary" href="#">JFB</a>
+            <button id="mobile-menu-button" class="md:hidden block text-text-dark focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <div class="hidden md:block" id="mobile-menu">
+                <ul class="flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0">
+                    <li>
+                        <a class="block py-2 md:py-0 text-primary hover:text-primary/80" href="#inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                            href="#experiencia">Experiencia</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                            href="#habilidades">Habilidades</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#educacion">Educación</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                            href="#testimonios">Testimonios</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="text-center py-16 md:py-2 flex items-center justify-center bg-white">
+            <div class="mt-8 container mx-auto px-4" data-aos="fade-up">
+                <div class="max-w-3xl mx-auto">
+                    <img src="placeholder-photo.jpeg" alt="Juan Felipe Builes"
+                        class="w-72 h-72 object-cover rounded-full mb-4 mx-auto border-4 border-bg-light" />
+                    <h1 class="text-4xl md:text-5xl font-light mb-2 text-text-dark main-headline">
+                        Juan Felipe Builes
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-600 mb-4 sub-headline">
+                        Product Manager | Gestión Ágil de Proyectos | Liderazgo y
+                        Desarrollo de Equipos | Comunicación Estratégica | Data-Driven
+                        Decision Making
+                    </h2>
+                    <p class="text-lg text-text-dark mt-4 hero-text">
+                        <strong>Soñador de tiempo completo y constructor de productos digitales
+                            con propósito.</strong>
+                        Apasionado por generar valor real y constante, combino pensamiento
+                        estratégico, experiencia en metodologías ágiles y conocimiento
+                        profundo en tecnología, negocio y experiencia de usuario. Mi
+                        enfoque está en impulsar el crecimiento profesional y colectivo,
+                        optimizando procesos e innovando de forma práctica para lograr
+                        resultados medibles. Siempre busco aportar soluciones que conecten
+                        visión, equipo y ejecución.
+                    </p>
+                    <p class="mt-6">
+                        <a href="#proyectos" class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out bg-primary text-white hover:bg-primary/90 my-2 main-cta">Explora mis Proyectos</a>
+                        <a href="#contacto" class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out border border-accent text-accent hover:bg-accent hover:text-white my-2 secondary-cta">Contáctame</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                        Sobre mí
+                    </h2>
+                    <p class="text-lg text-center text-gray-600 mb-8 section-subtitle">
+                        Combino estrategia, diseño y tecnología para crear productos
+                        digitales que conectan con las personas y generan impacto real.
+                    </p>
+                    <p class="text-text-dark mb-4">
+                        Como Ingeniero de Sistemas y Product Manager,
+                        mi enfoque se centra en comprender a fondo tanto al usuario como al negocio. 
+                        Me apasiona transformar necesidades complejas en soluciones tecnológicas simples, 
+                        funcionales y sostenibles.
+                    </p>
+                    <p class="text-text-dark mb-4">
+                        He liderado equipos multifuncionales de desarrollo, diseño UX/UI, productos, calidad de software 
+                        y operaciones; trabajando en entornos ágiles y gestionando el ciclo completo del producto:
+                        desde la ideación y validación, hasta el lanzamiento y la mejora continua.
+                    </p>
+                    <h4 class="text-xl font-semibold mt-6 mb-3 text-text-dark">
+                        Lo que me mueve:
+                    </h4>
+                    <ul class="space-y-2 approach-list">
+                        <li class="flex items-center text-text-dark">
+                            <span class="text-primary mr-2 font-bold">✓<strong> Usuario primero: </strong></span>
+                            Empatía para detectar y resolver problemas reales.
+                        </li>
+                        <li class="flex items-center text-text-dark">
+                            <span class="text-primary mr-2 font-bold">✓<strong> Visión estratégica: </strong></span>
+                             Alineación constante con objetivos del negocio.
+                        </li>
+                        <li class="flex items-center text-text-dark">
+                            <span class="text-primary mr-2 font-bold">✓<strong> Comunicación clara: </strong></span>
+                             Puentes sólidos entre equipos y áreas.
+                        </li>
+                        <li class="flex items-center text-text-dark">
+                            <span class="text-primary mr-2 font-bold">✓<strong> Iteración y aprendizaje: </strong></span>
+                             Decisiones basadas en datos, feedback y evolución constante.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="py-16 bg-bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                    Experiencia Profesional
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark">
+                                Product Manager
+                            </h5>
+                            <h6 class="text-sm text-gray-500 mb-3">
+                                Movilbox SAS | Abril 2024 – Presente
+                            </h6>
+                            <p class="text-text-dark text-sm flex-grow mb-3">
+                                Lideré la conformación del equipo de producto, incorporando
+                                perfiles clave como UX/UI, Product Owners y QA, y fomentando
+                                un entorno de alta retención y colaboración. Coordiné la
+                                entrega de productos y funcionalidades en estrecha
+                                comunicación con desarrolladores y stakeholders, garantizando
+                                cumplimiento de plazos y objetivos. Además, diseñé modelos de
+                                negocio enfocados en la monetización y expansión, impulsando
+                                el crecimiento sostenible de la compañía.
+                            </p>
+                            <a href="#proyectos1" class="text-primary hover:underline text-sm mt-auto">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark">
+                                Scrum Master Senior
+                            </h5>
+                            <h6 class="text-sm text-gray-500 mb-3">
+                                Iris CF | Junio 2022 – Abril 2024
+                            </h6>
+                            <p class="text-text-dark text-sm flex-grow mb-3">
+                                Facilité la entrega continua de productos y funcionalidades
+                                alineadas con los objetivos de negocio, asegurando
+                                cumplimiento en tiempos y calidad. Impulsé la adopción y
+                                mejora de metodologías ágiles como Scrum, Kanban y SAFe,
+                                optimizando la organización de sprints y el uso de métricas
+                                para la toma de decisiones. Además, actué como puente entre
+                                equipos técnicos, de producto y negocio, fortaleciendo la
+                                comunicación y acelerando la resolución de problemas.
+                            </p>
+                            <a href="#proyectos2" class="text-primary hover:underline text-sm mt-auto">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark">
+                                Web Master
+                            </h5>
+                            <h6 class="text-sm text-gray-500 mb-3">
+                                Pactia SAS | Marzo 2021 – Septiembre 2015
+                            </h6>
+                            <p class="text-text-dark text-sm flex-grow mb-3">
+                                Como Product Owner, gestioné el contenido y la actualización
+                                de las páginas de la empresa, asegurando estabilidad durante
+                                cada implementación. Lideré la creación y optimización de
+                                landing pages con foco en conversión, aplicando mejoras
+                                continuas en frontend y backend. Además, llevé a cabo
+                                auditorías técnicas y acciones de SEO que fortalecieron el
+                                posicionamiento orgánico y aumentaron la visibilidad de la
+                                marca en buscadores.
+                            </p>
+                            <a href="#proyectos3" class="text-primary hover:underline text-sm mt-auto">Ver Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                    Proyectos Destacados
+                </h2>
+                <div id="proyectos1" class="md:flex md:items-center mb-12 project-case-study" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8">
+                        <img src="img/movilbox.jpg" alt="Proyecto Quansa"
+                            class="w-full h-auto rounded-lg shadow-md border-4 border-bg-light" />
+                    </div>
+                    <div class="md:w-7/12">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-dark">
+                            Soluciones de Trade Marketing y Canales Alternativos
+                        </h3>
+                        <p class="mb-4">
+                            <span
+                                class="inline-block bg-primary/10 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">SaaS</span>
+                            <span
+                                class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">B2B2C</span>
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">El Reto</h5>
+                        <p class="text-text-dark mb-3">
+                            Diseñar y escalar soluciones digitales que optimicen la ejecución en el punto de venta, mejoren la visibilidad de las operaciones de campo y fortalezcan los canales de distribución alternativos. Los proyectos DCS+ y DCS TAT se centraron en la digitalización de la gestión de campo, mientras que Mi Punto Box buscó expandir la cobertura comercial mediante puntos de venta móviles y modulares.
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Mi Rol y Acciones Clave
+                        </h5>
+                        <p class="text-text-dark mb-3">
+                            Como Product Manager, lidero la estrategia y ejecución de estas iniciativas, enfocándome en la integración tecnológica, la experiencia del usuario y la alineación con los objetivos comerciales.
+                        </p>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>
+                                Definí la visión y el roadmap de producto para DCS+ y DCS TAT, priorizando funcionalidades clave mediante el marco RICE.
+                            </li>
+                            <li>
+                                Supervisé el desarrollo y despliegue de Mi Punto Box, asegurando su integración con los sistemas existentes y su adaptabilidad a diferentes entornos comerciales.
+                            </li>
+                            <li>
+                                Colaboré estrechamente con stakeholders internos y externos para alinear las soluciones con las necesidades del mercado y los objetivos estratégicos de la empresa.
+                            </li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Resultados e Impacto
+                        </h5>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>Reducción del 30% en los tiempos de reporte y análisis de datos de campo gracias a la implementación de DCS+.</li>
+                            <li>Incremento del 25% en la eficiencia operativa de los equipos de campo mediante la optimización de rutas y tareas con DCS TAT.</li>
+                            <li>Expansión de la cobertura comercial en un 40% mediante la implementación de Mi Punto Box en zonas de difícil acceso.</li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Aprendizajes
+                        </h5>
+                        <p class="text-text-dark">
+                            La importancia de una comunicación constante y efectiva entre equipos técnicos y comerciales para garantizar el éxito de las soluciones implementadas. El valor de la adaptabilidad y la innovación en el desarrollo de productos que respondan a las necesidades cambiantes del mercado. Y la relevancia de una gestión de producto centrada en el usuario para lograr una adopción y satisfacción sostenibles.
+                        </p>
+                    </div>
+                </div>
+                <div id="proyectos2" class="md:flex md:items-center mb-12 project-case-study" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8">
+                        <img src="img/iris.jpg" alt="Proyecto Quansa"
+                            class="w-full h-auto rounded-lg shadow-md border-4 border-bg-light" />
+                    </div>
+                    <div class="md:w-7/12">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-dark">
+                            Cuenta de Ahorros, Iris Card e Iris Pay
+                        </h3>
+                        <p class="mb-4">
+                            <span
+                                class="inline-block bg-primary/10 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">FinTech</span>
+                            <span
+                                class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">B2B2C</span>
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">El Reto</h5>
+                        <p class="text-text-dark mb-3">
+                            Coordinar la entrega efectiva de tres productos financieros digitales (cuenta de ahorros, tarjeta Iris Card y pagos móviles Iris Pay), asegurando cumplimiento de plazos, calidad en la entrega y eficiencia operativa, en un entorno de alto crecimiento y múltiples stakeholders..
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Mi Rol y Acciones Clave
+                        </h5>
+                        <p class="text-text-dark mb-3">
+                            Como Agile Delivery Manager, estuve al frente de la ejecución operativa de este ecosistema digital, conectando visión estratégica con ejecución táctica. Mi enfoque estuvo en orquestar equipos, remover bloqueos, y garantizar entregas consistentes alineadas con los objetivos de producto, regulaciones y necesidades del usuario final.
+                        </p>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>
+                                Aseguré la entrega de funcionalidades end-to-end, desde discovery hasta producción.
+                            </li>
+                            <li>Coordiné squads multidisciplinarios bajo marcos ágiles (Scrum y Kanban).</li>
+                            <li>
+                                Definí KPIs de entrega y velocity, alineando expectativas con negocio, tecnología y diseño.
+                            </li>
+                            <li>
+                                Supervisé la planificación de sprints, manejo de dependencias y mitigación de riesgos.
+                            </li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Resultados e Impacto
+                        </h5>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>95% de entregas dentro del timeline estimado.</li>
+                            <li>Reducción del 20% en retrabajo gracias a refinamientos más eficientes y criterios de aceptación claros.</li>
+                            <li>Mejora del time-to-market en un 25% frente a versiones anteriores.</li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Aprendizajes
+                        </h5>
+                        <p class="text-text-dark">
+                            El impacto de una entrega predecible y bien coordinada en la confianza del negocio. La importancia de visibilizar avances, riesgos y bloqueos en tiempo real. Y el valor de empoderar a los equipos para que se adueñen de sus entregables.
+                        </p>
+                    </div>
+                </div>
+                <div id="proyectos3" class="md:flex md:items-center mb-12 project-case-study" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8">
+                        <img src="img/pactia.jpg" alt="Proyecto Quansa"
+                            class="w-full h-auto rounded-lg shadow-md border-4 border-bg-light" />
+                    </div>
+                    <div class="md:w-7/12">
+                        <h3 class="text-2xl font-semibold mb-2 text-text-dark">
+                            Transformación Digital de Pactia
+                        </h3>
+                        <p class="mb-4">
+                            <span
+                                class="inline-block bg-primary/10 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">Real Estate</span>
+                            <span
+                                class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PropTech B2B</span>
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">El Reto</h5>
+                        <p class="text-text-dark mb-3">
+                            Modernizar la presencia digital de Pactia, una firma líder en gestión de activos inmobiliarios, para alinear su plataforma web con los objetivos estratégicos de negocio, mejorar la experiencia del usuario y optimizar la generación de leads en un entorno altamente competitivo.
+                        </p>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Mi Rol y Acciones Clave
+                        </h5>
+                        <p class="text-text-dark mb-3">
+                            Como Product Owner, lideré la renovación integral de Pactia.com, enfocándome en implementar soluciones tecnológicas que mejoraran la eficiencia operativa y la interacción con los usuarios. Fui responsable desde la definición de la visión del producto hasta la supervisión de su ejecución técnica, asegurando alineación constante con los objetivos corporativos. 
+                        </p>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>
+                                Definí y prioricé el backlog del producto utilizando el marco RICE, asegurando un enfoque estratégico en las funcionalidades de mayor impacto.
+                            </li>
+                            <li>Coordiné equipos multidisciplinarios bajo metodologías ágiles (Scrum y Kanban) para garantizar entregas puntuales y de calidad.</li>
+                            <li>
+                                Implementé herramientas de análisis como Google Analytics y Hotjar para monitorear el comportamiento del usuario y optimizar la experiencia en el sitio.
+                            </li>
+                            <li>
+                                Gestioné la integración de Vtiger CRM, consolidando la información de clientes y mejorando la eficiencia en la gestión de leads.
+                            </li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Resultados e Impacto
+                        </h5>
+                        <ul class="list-disc list-inside text-text-dark space-y-1 mb-3">
+                            <li>Aumento del 40% en la generación de leads calificados a través del sitio web.</li>
+                            <li>Reducción del 25% en el tiempo de carga del sitio, mejorando la retención de usuarios.</li>
+                            <li>Incremento del 35% en la tasa de conversión de formularios de contacto.</li>
+                        </ul>
+                        <h5 class="text-lg font-semibold mb-1 text-text-dark">
+                            Aprendizajes
+                        </h5>
+                        <p class="text-text-dark">
+                            La importancia de una comunicación constante entre equipos técnicos y de negocio para alinear objetivos y expectativas. El valor de una mentalidad centrada en el usuario, usando datos y feedback cualitativo para guiar decisiones de diseño y funcionalidad. La necesidad de una infraestructura tecnológica flexible que se adapte rápidamente a las cambiantes demandas del mercado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="py-16 bg-bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                    Habilidades
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="text-xl font-semibold mb-3 text-text-dark">
+                            Gestión de Producto
+                        </h4>
+                        <ul class="space-y-2 text-text-dark skills-list">
+                            <li>Estrategia de Producto</li>
+                            <li>Roadmapping & Priorización (RICE, MoSCoW)</li>
+                            <li>Investigación de Usuarios (Entrevistas, Encuestas)</li>
+                            <li>Análisis de Mercado y Competencia</li>
+                            <li>Definición de Requerimientos (User Stories, PRDs)</li>
+                            <li>Gestión del Ciclo de Vida del Producto</li>
+                            <li>Experimentación (A/B Testing)</li>
+                            <li>Análisis de Datos (SQL, Mixpanel, GA)</li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-xl font-semibold mb-3 text-text-dark">
+                            Metodologías & Herramientas
+                        </h4>
+                        <ul class="space-y-2 text-text-dark skills-list">
+                            <li>Agile (Scrum & Kanban)</li>
+                            <li>Jira & Confluence / Azure Boards</li>
+                            <li>Miro / FigJam</li>
+                            <li>PowerBI & Looker Studio / Google Analytics</li>
+                            <li>SQL (Básico-Intermedio)</li>
+                            <li>Figma (Lectura e Interpretación)</li>
+                            <li>Notion</li>
+                            <li>Excel / Google Sheets (Avanzado)</li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="text-xl font-semibold mb-3 text-text-dark">
+                            Habilidades Blandas
+                        </h4>
+                        <ul class="space-y-2 text-text-dark skills-list">
+                            <li>Liderazgo de Equipos</li>
+                            <li>Comunicación (Oral y Escrita)</li>
+                            <li>Resolución de Problemas</li>
+                            <li>Pensamiento Crítico y Analítico</li>
+                            <li>Negociación e Influencia</li>
+                            <li>Adaptabilidad y Resiliencia</li>
+                            <li>Empatía</li>
+                            <li>Gestión de Stakeholders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="educacion" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                    Educación y Certificaciones
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="text-xl font-semibold mb-2 text-text-dark">
+                            Ingeniero de Diseño de Sistemas
+                        </h4>
+                        <p class="text-gray-600">ITM – Institución Universitaria</p>
+                        <p class="text-sm text-gray-500">2020</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-xl font-semibold mb-2 text-text-dark">
+                            Certificaciones Clave
+                        </h4>
+                        <p class="text-text-dark">
+                            El Certificado Profesional Scrum Master (SMPC)
+                        </p>
+                        <p class="text-text-dark">
+                            Scrum Product Owner Professional Certificate (SPOPC)
+                        </p>
+                        <p class="mt-3 text-sm text-gray-500">
+                            + Formación continua en Platzi (Product Management, Growth...)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="py-16 bg-bg-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up">
+                    Lo que dicen de mi trabajo
+                </h2>
+                <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                        <p class="italic text-text-dark mb-4">
+                            "[Cita de Oscar] Juan Felipe demostró una gran capacidad
+                            para entender las necesidades del negocio y traducirlas en
+                            soluciones de producto efectivas. Su liderazgo y enfoque en
+                            datos fueron clave para el éxito del proyecto."
+                        </p>
+                        <p class="font-semibold text-text-dark">Oscar Mauricio Montoya</p>
+                        <p class="text-sm text-gray-500">CEO & Cofounder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-3xl font-bold mb-4 section-title text-text-dark" data-aos="fade-up">
+                    Hablemos
+                </h2>
+                <p class="text-lg text-center text-gray-600 mb-8 section-subtitle" data-aos="fade-up"
+                    data-aos-delay="100">
+                    Estoy abierto a conectar, discutir ideas o explorar oportunidades.
+                    ¡Contáctame!
+                </p>
+                <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <form id="contact-form" class="space-y-4"> <!-- Quitar action y method, añadir ID -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-text-dark mb-1">Nombre</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-text-dark mb-1">Correo
+                                Electrónico</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-text-dark mb-1">Asunto</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-text-dark mb-1">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white"></textarea>
+                        </div>
+                        <button type="submit" class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out bg-primary text-white hover:bg-primary/90 w-full main-cta">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                    <!-- Añadir div para mensajes de estado -->
+                    <div id="form-status" class="mt-4 text-center"></div>
+                    <div class="text-center mt-8 contact-links">
+                        <p class="text-text-dark mb-3">O encuéntrame en:</p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="mailto:lipebuiles@icloud.com"
+                                class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out border border-accent text-accent hover:bg-accent hover:text-white inline-flex items-center">
+                                Email
+                            </a>
+                            <a href="https://co.linkedin.com/in/juanfelipebuiles" target="_blank"
+                                rel="noopener noreferrer" class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out border border-accent text-accent hover:bg-accent hover:text-white inline-flex items-center">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center text-gray-500 bg-bg-light border-t border-gray-300">
+        <div class="container mx-auto px-4">
+            <p class="mb-0">
+                &copy; <span id="currentYear"></span> Juan Felipe Builes. Todos
+                los derechos reservados.
+            </p>
+            <p class="text-sm">Medellín, Colombia</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

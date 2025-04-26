@@ -1,0 +1,34 @@
+/* css/style.css */
+
+/* 4. Styles for section title underline */
+.section-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px; /* Ancho de la línea */
+    height: 3px; /* Grosor de la línea */
+    background-color: #128c7e; /* Use Tailwind primary color directly */
+    bottom: -5px; /* Espacio bajo el texto, ajustar si es necesario */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la línea */
+}
+
+/* 5. Style for scrollbar (WebKit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dfeae2; /* Use Tailwind bg-light color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #128c7e; /* Use Tailwind primary color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0f7065; /* Darker shade of primary for hover */
+}
