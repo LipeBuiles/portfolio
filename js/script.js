@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTheme(theme) {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
-            if (lightIcon) lightIcon.classList.add('hidden');    // Theme is dark, so hide sun icon
-            if (darkIcon) darkIcon.classList.remove('hidden');    // Theme is dark, so show moon icon
+            if (lightIcon) lightIcon.classList.remove('hidden'); // Theme is dark, show sun icon (to switch to light)
+            if (darkIcon) darkIcon.classList.add('hidden');        // Theme is dark, hide moon icon
             localStorage.setItem('theme', 'dark');
         } else { // theme is 'light'
             document.documentElement.classList.remove('dark');
-            if (lightIcon) lightIcon.classList.remove('hidden'); // Theme is light, so show sun icon
-            if (darkIcon) darkIcon.classList.add('hidden');        // Theme is light, so hide moon icon
+            if (lightIcon) lightIcon.classList.add('hidden');        // Theme is light, hide sun icon
+            if (darkIcon) darkIcon.classList.remove('hidden'); // Theme is light, show moon icon (to switch to dark)
             localStorage.setItem('theme', 'light');
         }
     }
