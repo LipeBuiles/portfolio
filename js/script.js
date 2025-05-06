@@ -148,4 +148,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const preferredLang = localStorage.getItem('preferredLang') || 'es';
     setLanguage(preferredLang);
 
+    // Formspree submission
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const successAlert = document.getElementById('success-alert');
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: contactForm.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                successAlert.classList.remove('hidden');
+                // Optionally, update text content based on language
+                const currentLang = localStorage.getItem('preferredLang') || 'es';
+                const successTitle = successAlert.querySelector('span[data-translate="contacto.form.exitoTitulo"]');
+                const successMessage = successAlert.querySelector('span[data-translate="contacto.form.exitoMensaje"]');
+                if (translations[currentLang] && translations[currentLang]["contacto.form.exitoTitulo"]) {
+                    successTitle.textContent = translations[currentLang]["contacto.form.exitoTitulo"];
+                }
+                if (translations[currentLang] && translations[currentLang]["contacto.form.exitoMensaje"]) {
+                    successMessage.textContent = translations[currentLang]["contacto.form.exitoMensaje"];
+                }
+
+                contactForm.reset();
+                setTimeout(() => {
+                    successAlert.classList.add('hidden');
+                }, 5000); // Hide after 5 seconds
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                    } else {
+                        formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+                        const currentLang = localStorage.getItem('preferredLang') || 'es';
+                        if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
+                           formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
+                        }
+                    }
+                })
+            }
+        }).catch(error => {
+            formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+            const currentLang = localStorage.getItem('preferredLang') || 'es';
+            if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
+                formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
+            }
+        });
+    }
+    contactForm.addEventListener("submit", handleSubmit)
+
 });

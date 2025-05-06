@@ -583,7 +583,7 @@
                     ¡Contáctame!
                 </p>
                 <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                    <form id="contact-form" class="space-y-4">
+                    <form id="contact-form" action="https://formspree.io/f/xvgagknl" method="POST" class="space-y-4">
                         <div>
                             <label for="name" class="block text-sm font-medium text-text-dark mb-1" data-translate="contacto.form.nombreLabel">Nombre</label>
                             <input type="text" id="name" name="name" required
@@ -610,6 +610,9 @@
                         </button>
                     </form>
                     <div id="form-status" class="mt-4 text-center"></div>
+                    <div id="success-alert" class="hidden mt-4 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+                        <span class="font-medium" data-translate="contacto.form.exitoTitulo">¡Éxito!</span> <span data-translate="contacto.form.exitoMensaje">Tu mensaje ha sido enviado correctamente.</span>
+                    </div>
                     <div class="text-center mt-8 contact-links">
                         <p class="text-text-dark mb-3" data-translate="contacto.encuentrameEn">O encuéntrame en:</p>
                         <div class="flex justify-center space-x-3">
