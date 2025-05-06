@@ -135,6 +135,17 @@ const translations = {
             "Empatía",
             "Gestión de Stakeholders"
         ],
+        "habilidades.lenguajes.titulo": "Lenguajes",
+        "habilidades.lenguajes.lista": [
+            "Python",
+            "SQL",
+            "DAX",
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Docker"
+        ],
 
         // Education Section (Educación)
         "educacion.titulo": "Educación y Certificaciones",
@@ -312,6 +323,17 @@ const translations = {
             "Adaptability and Resilience",
             "Empathy",
             "Stakeholder Management"
+        ],
+        "habilidades.lenguajes.titulo": "Languages",
+        "habilidades.lenguajes.lista": [
+            "Python",
+            "SQL",
+            "DAX",
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Docker"
         ],
 
         // Education Section (Educación)

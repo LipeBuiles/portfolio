@@ -64,3 +64,11 @@
     background: #128c7e; /* Color primario para el progreso */
     border-radius: 2px;
 }
+
+/* Styles for Habilidades section list items */
+#habilidades .grid ul li {
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide the text that overflows */
+    text-overflow: ellipsis; /* Add an ellipsis (...) to indicate truncated text */
+    /* Ensure list items still have some vertical spacing if needed, though space-y-2 on ul should handle it */
+}
