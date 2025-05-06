@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const langEsButton = document.getElementById('lang-es');
     const langEnButton = document.getElementById('lang-en');
     const htmlEl = document.documentElement; // Get the <html> element
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-toggle-light-icon'); // Changed from sunIcon and theme-toggle-sun-icon
+    const darkIcon = document.getElementById('theme-toggle-dark-icon'); // Changed from moonIcon and theme-toggle-moon-icon
 
     // Function to update texts based on selected language
     function updateTexts(lang) {
@@ -102,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Swiper('.progress-slide-carousel', {
         loop: true,
         autoplay: {
-            delay: 5000,
+            delay: 8000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -147,6 +150,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load preferred language from localStorage or default to 'es'
     const preferredLang = localStorage.getItem('preferredLang') || 'es';
     setLanguage(preferredLang);
+
+    // Theme toggle functionality
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            if (lightIcon) lightIcon.classList.add('hidden');    // Theme is dark, so hide sun icon
+            if (darkIcon) darkIcon.classList.remove('hidden');    // Theme is dark, so show moon icon
+            localStorage.setItem('theme', 'dark');
+        } else { // theme is 'light'
+            document.documentElement.classList.remove('dark');
+            if (lightIcon) lightIcon.classList.remove('hidden'); // Theme is light, so show sun icon
+            if (darkIcon) darkIcon.classList.add('hidden');        // Theme is light, so hide moon icon
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', () => {
+            // Determine current theme by checking the class on <html>
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            if (isDarkMode) {
+                setTheme('light'); // If it's dark, switch to light
+            } else {
+                setTheme('dark');  // If it's light, switch to dark
+            }
+        });
+    } else {
+        console.error("Theme toggle button #theme-toggle not found!");
+    }
+
+    // Load preferred theme from localStorage
+    const preferredTheme = localStorage.getItem('theme');
+    if (preferredTheme) {
+        setTheme(preferredTheme);
+    } else {
+        // If no theme is stored, use system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+
+    // Listen for changes in system color scheme preference
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) { // Only if user hasn't manually set a theme
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
 
     // Formspree submission
     const contactForm = document.getElementById('contact-form');

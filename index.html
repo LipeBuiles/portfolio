@@ -23,6 +23,7 @@
     <script src="js/locales.js"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class', // Ensure dark mode is class-based
             theme: {
                 extend: {
                     colors: {
@@ -40,10 +41,10 @@
 </head>
 
 <body>
-    <nav id="main-nav" class="bg-white shadow-sm sticky top-0 z-50 transition-colors duration-300 ease-in-out">
+    <nav id="main-nav" class="bg-white dark:bg-bg-dark shadow-sm sticky top-0 z-50 transition-colors duration-300 ease-in-out">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a class="font-bold text-xl text-primary" href="#">JFB</a>
-            <button id="mobile-menu-button" class="md:hidden block text-text-dark focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden block text-text-dark dark:text-bg-light focus:outline-none">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
@@ -56,53 +57,57 @@
                         <a class="block py-2 md:py-0 text-primary hover:text-primary/80" href="#inicio" data-translate="nav.inicio">Inicio</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#sobre-mi" data-translate="nav.sobreMi">Sobre mí</a>
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary" href="#sobre-mi" data-translate="nav.sobreMi">Sobre mí</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary"
                             href="#experiencia" data-translate="nav.experiencia">Experiencia</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#proyectos" data-translate="nav.proyectos">Proyectos</a>
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary" href="#proyectos" data-translate="nav.proyectos">Proyectos</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary"
                             href="#habilidades" data-translate="nav.habilidades">Habilidades</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#educacion" data-translate="nav.educacion">Educación</a>
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary" href="#educacion" data-translate="nav.educacion">Educación</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary"
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary"
                             href="#testimonios" data-translate="nav.testimonios">Testimonios</a>
                     </li>
                     <li>
-                        <a class="block py-2 md:py-0 text-text-dark hover:text-primary" href="#contacto" data-translate="nav.contacto">Contacto</a>
+                        <a class="block py-2 md:py-0 text-text-dark dark:text-bg-light hover:text-primary" href="#contacto" data-translate="nav.contacto">Contacto</a>
                     </li>
                 </ul>
                 <div class="ml-4 flex space-x-2">
                     <button id="lang-es" class="px-3 py-1 text-sm rounded bg-primary text-white hover:bg-primary/90">ES</button>
-                    <button id="lang-en" class="px-3 py-1 text-sm rounded bg-gray-200 text-text-dark hover:bg-gray-300">EN</button>
+                    <button id="lang-en" class="px-3 py-1 text-sm rounded bg-gray-200 text-text-dark hover:bg-gray-300 dark:bg-gray-700 dark:text-bg-light dark:hover:bg-gray-600">EN</button>
+                    <button id="theme-toggle" class="ml-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <svg id="theme-toggle-dark-icon" class="h-6 w-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 14.464A1 1 0 106.465 13.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414-9.193a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414L6.464 5.271a1 1 0 01-1.414 0zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section id="inicio" class="text-center py-16 md:py-2 flex items-center justify-center bg-white">
+    <main class="bg-white dark:bg-bg-dark text-text-dark dark:text-bg-light transition-colors duration-300 ease-in-out">
+        <section id="inicio" class="text-center py-16 md:py-2 flex items-center justify-center bg-white dark:bg-bg-dark">
             <div class="mt-8 container mx-auto px-4" data-aos="fade-up">
                 <div class="max-w-3xl mx-auto">
                     <img src="placeholder-photo.jpeg" alt="Juan Felipe Builes"
-                        class="w-72 h-72 object-cover rounded-full mb-4 mx-auto border-4 border-bg-light" />
-                    <h1 class="text-4xl md:text-5xl font-light mb-2 text-text-dark main-headline" data-translate="inicio.nombre">
+                        class="w-72 h-72 object-cover rounded-full mb-4 mx-auto border-4 border-bg-light dark:border-gray-700" />
+                    <h1 class="text-4xl md:text-5xl font-light mb-2 text-text-dark dark:text-bg-light main-headline" data-translate="inicio.nombre">
                         Juan Felipe Builes
                     </h1>
-                    <h2 class="text-xl md:text-2xl text-gray-600 mb-4 sub-headline" data-translate="inicio.titulo">
+                    <h2 class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4 sub-headline" data-translate="inicio.titulo">
                         Product Manager | Gestión Ágil de Proyectos | Liderazgo y
                         Desarrollo de Equipos | Comunicación Estratégica | Data-Driven
                         Decision Making
                     </h2>
-                    <p class="text-lg text-text-dark mt-4 hero-text" data-translate="inicio.descripcion">
+                    <p class="text-lg text-text-dark dark:text-bg-light mt-4 hero-text" data-translate="inicio.descripcion">
                         <strong>Soñador de tiempo completo y constructor de productos digitales
                             con propósito.</strong>
                         Apasionado por generar valor real y constante, combino pensamiento
@@ -121,44 +126,44 @@
             </div>
         </section>
 
-        <section id="sobre-mi" class="py-16 bg-white">
+        <section id="sobre-mi" class="py-16 bg-white dark:bg-bg-dark">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="sobreMi.titulo">
+                    <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="sobreMi.titulo">
                         Sobre mí
                     </h2>
-                    <p class="text-lg text-center text-gray-600 mb-8 section-subtitle" data-translate="sobreMi.subtitulo">
+                    <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-8 section-subtitle" data-translate="sobreMi.subtitulo">
                         Combino estrategia, diseño y tecnología para crear productos
                         digitales que conectan con las personas y generan impacto real.
                     </p>
-                    <p class="text-text-dark mb-4" data-translate="sobreMi.parrafo1">
+                    <p class="text-text-dark dark:text-bg-light mb-4" data-translate="sobreMi.parrafo1">
                         Como Ingeniero de Sistemas y Product Manager,
                         mi enfoque se centra en comprender a fondo tanto al usuario como al negocio. 
                         Me apasiona transformar necesidades complejas en soluciones tecnológicas simples, 
                         funcionales y sostenibles.
                     </p>
-                    <p class="text-text-dark mb-4" data-translate="sobreMi.parrafo2">
+                    <p class="text-text-dark dark:text-bg-light mb-4" data-translate="sobreMi.parrafo2">
                         He liderado equipos multifuncionales de desarrollo, diseño UX/UI, productos, calidad de software 
                         y operaciones; trabajando en entornos ágiles y gestionando el ciclo completo del producto:
                         desde la ideación y validación, hasta el lanzamiento y la mejora continua.
                     </p>
-                    <h4 class="text-xl font-semibold mt-6 mb-3 text-text-dark" data-translate="sobreMi.loQueMeMueve">
+                    <h4 class="text-xl font-semibold mt-6 mb-3 text-text-dark dark:text-bg-light" data-translate="sobreMi.loQueMeMueve">
                         Lo que me mueve:
                     </h4>
                     <ul class="space-y-2 approach-list">
-                        <li class="flex items-center text-text-dark">
+                        <li class="flex items-center text-text-dark dark:text-bg-light">
                             <span class="text-primary mr-2 font-bold">✓<strong data-translate="sobreMi.mueve.usuario"> Usuario primero: </strong></span>
                             <span data-translate="sobreMi.mueve.usuarioDesc">Empatía para detectar y resolver problemas reales.</span>
                         </li>
-                        <li class="flex items-center text-text-dark">
+                        <li class="flex items-center text-text-dark dark:text-bg-light">
                             <span class="text-primary mr-2 font-bold">✓<strong data-translate="sobreMi.mueve.vision"> Visión estratégica: </strong></span>
                             <span data-translate="sobreMi.mueve.visionDesc"> Alineación constante con objetivos del negocio.</span>
                         </li>
-                        <li class="flex items-center text-text-dark">
+                        <li class="flex items-center text-text-dark dark:text-bg-light">
                             <span class="text-primary mr-2 font-bold">✓<strong data-translate="sobreMi.mueve.comunicacion"> Comunicación clara: </strong></span>
                             <span data-translate="sobreMi.mueve.comunicacionDesc"> Puentes sólidos entre equipos y áreas.</span>
                         </li>
-                        <li class="flex items-center text-text-dark">
+                        <li class="flex items-center text-text-dark dark:text-bg-light">
                             <span class="text-primary mr-2 font-bold">✓<strong data-translate="sobreMi.mueve.iteracion"> Iteración y aprendizaje: </strong></span>
                             <span data-translate="sobreMi.mueve.iteracionDesc"> Decisiones basadas en datos, feedback y evolución constante.</span>
                         </li>
@@ -167,21 +172,21 @@
             </div>
         </section>
 
-        <section id="experiencia" class="py-16 bg-bg-light">
+        <section id="experiencia" class="py-16 bg-bg-light dark:bg-gray-800">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="experiencia.titulo">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="experiencia.titulo">
                     Experiencia Profesional
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
-                            <h5 class="text-xl font-semibold mb-1 text-text-dark" data-translate="experiencia.movilbox.cargo">
+                        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="experiencia.movilbox.cargo">
                                 Product Manager
                             </h5>
-                            <h6 class="text-sm text-gray-500 mb-3" data-translate="experiencia.movilbox.empresaFecha">
+                            <h6 class="text-sm text-gray-500 dark:text-gray-400 mb-3" data-translate="experiencia.movilbox.empresaFecha">
                                 Movilbox SAS | Abril 2024 – Presente
                             </h6>
-                            <p class="text-text-dark text-sm flex-grow mb-3" data-translate="experiencia.movilbox.descripcion">
+                            <p class="text-text-dark dark:text-gray-300 text-sm flex-grow mb-3" data-translate="experiencia.movilbox.descripcion">
                                 Lideré la conformación del equipo de producto, incorporando
                                 perfiles clave como UX/UI, Product Owners y QA, y fomentando
                                 un entorno de alta retención y colaboración. Coordiné la
@@ -191,18 +196,18 @@
                                 negocio enfocados en la monetización y expansión, impulsando
                                 el crecimiento sostenible de la compañía.
                             </p>
-                            <a href="#proyectos1" class="text-primary hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
+                            <a href="#proyectos1" class="text-primary dark:text-primary/80 hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
-                            <h5 class="text-xl font-semibold mb-1 text-text-dark" data-translate="experiencia.iris.cargo">
+                        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="experiencia.iris.cargo">
                                 Scrum Master Senior
                             </h5>
-                            <h6 class="text-sm text-gray-500 mb-3" data-translate="experiencia.iris.empresaFecha">
+                            <h6 class="text-sm text-gray-500 dark:text-gray-400 mb-3" data-translate="experiencia.iris.empresaFecha">
                                 Iris CF | Junio 2022 – Abril 2024
                             </h6>
-                            <p class="text-text-dark text-sm flex-grow mb-3" data-translate="experiencia.iris.descripcion">
+                            <p class="text-text-dark dark:text-gray-300 text-sm flex-grow mb-3" data-translate="experiencia.iris.descripcion">
                                 Facilité la entrega continua de productos y funcionalidades
                                 alineadas con los objetivos de negocio, asegurando
                                 cumplimiento en tiempos y calidad. Impulsé la adopción y
@@ -212,18 +217,18 @@
                                 equipos técnicos, de producto y negocio, fortaleciendo la
                                 comunicación y acelerando la resolución de problemas.
                             </p>
-                            <a href="#proyectos2" class="text-primary hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
+                            <a href="#proyectos2" class="text-primary dark:text-primary/80 hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <div class="bg-white rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
-                            <h5 class="text-xl font-semibold mb-1 text-text-dark" data-translate="experiencia.pactia.cargo">
+                        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 h-full experience-card flex flex-col">
+                            <h5 class="text-xl font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="experiencia.pactia.cargo">
                                 Web Master
                             </h5>
-                            <h6 class="text-sm text-gray-500 mb-3" data-translate="experiencia.pactia.empresaFecha">
+                            <h6 class="text-sm text-gray-500 dark:text-gray-400 mb-3" data-translate="experiencia.pactia.empresaFecha">
                                 Pactia SAS | Marzo 2021 – Septiembre 2015
                             </h6>
-                            <p class="text-text-dark text-sm flex-grow mb-3" data-translate="experiencia.pactia.descripcion">
+                            <p class="text-text-dark dark:text-gray-300 text-sm flex-grow mb-3" data-translate="experiencia.pactia.descripcion">
                                 Como Product Owner, gestioné el contenido y la actualización
                                 de las páginas de la empresa, asegurando estabilidad durante
                                 cada implementación. Lideré la creación y optimización de
@@ -233,16 +238,16 @@
                                 posicionamiento orgánico y aumentaron la visibilidad de la
                                 marca en buscadores.
                             </p>
-                            <a href="#proyectos3" class="text-primary hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
+                            <a href="#proyectos3" class="text-primary dark:text-primary/80 hover:underline text-sm mt-auto" data-translate="experiencia.verProyecto">Ver Proyecto</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="proyectos" class="py-16 bg-white">
+        <section id="proyectos" class="py-16 bg-white dark:bg-bg-dark">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="proyectos.titulo">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="proyectos.titulo">
                     Proyectos Destacados
                 </h2>
                 <!-- Proyecto 1 -->
@@ -250,11 +255,11 @@
                     <div class="md:flex md:items-start project-case-study">
                         <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8 project-image-container">
                             <img src="img/movilbox.jpg" alt="Proyecto Movilbox"
-                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light project-image" />
+                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light dark:border-gray-700 project-image" />
                         </div>
                         <div class="md:w-7/12 project-description-container">
-                            <div class="project-description">
-                                <h3 class="text-2xl font-semibold mb-2 text-text-dark project-title" data-translate="proyectos.movilbox.titulo">
+                            <div class="project-description dark:text-gray-300">
+                                <h3 class="text-2xl font-semibold mb-2 text-text-dark dark:text-bg-light project-title" data-translate="proyectos.movilbox.titulo">
                                     Soluciones de Trade Marketing y Canales Alternativos
                                 </h3>
                                 <p class="mb-4 project-tags">
@@ -263,17 +268,17 @@
                                     <span
                                         class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">B2B2C</span>
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.elReto">El Reto</h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.movilbox.reto">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.elReto">El Reto</h5>
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.movilbox.reto">
                                     Diseñar y escalar soluciones digitales que optimicen la ejecución en el punto de venta, mejoren la visibilidad de las operaciones de campo y fortalezcan los canales de distribución alternativos. Los proyectos DCS+ y DCS TAT se centraron en la digitalización de la gestión de campo, mientras que Mi Punto Box buscó expandir la cobertura comercial mediante puntos de venta móviles y modulares.
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.miRol">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.miRol">
                                     Mi Rol y Acciones Clave
                                 </h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.movilbox.rol">
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.movilbox.rol">
                                     Como Product Manager, lidero la estrategia y ejecución de estas iniciativas, enfocándome en la integración tecnológica, la experiencia del usuario y la alineación con los objetivos comerciales.
                                 </p>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.movilbox.acciones,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.movilbox.acciones,list">
                                     <li>
                                         Definí la visión y el roadmap de producto para DCS+ y DCS TAT, priorizando funcionalidades clave mediante el marco RICE.
                                     </li>
@@ -284,25 +289,25 @@
                                         Colaboré estrechamente con stakeholders internos y externos para alinear las soluciones con las necesidades del mercado y los objetivos estratégicos de la empresa.
                                     </li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.resultados">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.resultados">
                                     Resultados e Impacto
                                 </h5>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.movilbox.resultados,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.movilbox.resultados,list">
                                     <li>Reducción del 30% en los tiempos de reporte y análisis de datos de campo gracias a la implementación de DCS+.</li>
                                     <li>Incremento del 25% en la eficiencia operativa de los equipos de campo mediante la optimización de rutas y tareas con DCS TAT.</li>
                                     <li>Expansión de la cobertura comercial en un 40% mediante la implementación de Mi Punto Box en zonas de difícil acceso.</li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.aprendizajes">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.aprendizajes">
                                     Aprendizajes
                                 </h5>
-                                <p class="text-text-dark" data-translate="proyectos.movilbox.aprendizajes">
+                                <p class="text-text-dark dark:text-gray-300" data-translate="proyectos.movilbox.aprendizajes">
                                     La importancia de una comunicación constante y efectiva entre equipos técnicos y comerciales para garantizar el éxito de las soluciones implementadas. El valor de la adaptabilidad y la innovación en el desarrollo de productos que respondan a las necesidades cambiantes del mercado. Y la relevancia de una gestión de producto centrada en el usuario para lograr una adopción y satisfacción sostenibles.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="text-right mt-4">
-                        <button data-project-id="proyectos1" class="open-project-modal text-primary hover:underline inline-flex items-center" data-translate="proyectos.verMas">
+                        <button data-project-id="proyectos1" class="open-project-modal text-primary dark:text-primary/80 hover:underline inline-flex items-center" data-translate="proyectos.verMas">
                             Ver más
                             <span class="material-symbols-outlined align-middle ml-1 text-lg">add</span>
                         </button>
@@ -314,11 +319,11 @@
                      <div class="md:flex md:items-start project-case-study">
                         <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8 project-image-container">
                             <img src="img/iris.jpg" alt="Proyecto Iris CF"
-                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light project-image" />
+                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light dark:border-gray-700 project-image" />
                         </div>
                         <div class="md:w-7/12 project-description-container">
-                             <div class="project-description">
-                                <h3 class="text-2xl font-semibold mb-2 text-text-dark project-title" data-translate="proyectos.iris.titulo">
+                             <div class="project-description dark:text-gray-300">
+                                <h3 class="text-2xl font-semibold mb-2 text-text-dark dark:text-bg-light project-title" data-translate="proyectos.iris.titulo">
                                     Cuenta de Ahorros, Iris Card e Iris Pay
                                 </h3>
                                 <p class="mb-4 project-tags">
@@ -327,17 +332,17 @@
                                     <span
                                         class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">B2B2C</span>
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.elReto">El Reto</h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.iris.reto">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.elReto">El Reto</h5>
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.iris.reto">
                                     Coordinar la entrega efectiva de tres productos financieros digitales (cuenta de ahorros, tarjeta Iris Card y pagos móviles Iris Pay), asegurando cumplimiento de plazos, calidad en la entrega y eficiencia operativa, en un entorno de alto crecimiento y múltiples stakeholders..
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.miRol">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.miRol">
                                     Mi Rol y Acciones Clave
                                 </h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.iris.rol">
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.iris.rol">
                                     Como Agile Delivery Manager, estuve al frente de la ejecución operativa de este ecosistema digital, conectando visión estratégica con ejecución táctica. Mi enfoque estuvo en orquestar equipos, remover bloqueos, y garantizar entregas consistentes alineadas con los objetivos de producto, regulaciones y necesidades del usuario final.
                                 </p>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.iris.acciones,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.iris.acciones,list">
                                     <li>
                                         Aseguré la entrega de funcionalidades end-to-end, desde discovery hasta producción.
                                     </li>
@@ -349,25 +354,25 @@
                                         Supervisé la planificación de sprints, manejo de dependencias y mitigación de riesgos.
                                     </li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.resultados">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.resultados">
                                     Resultados e Impacto
                                 </h5>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.iris.resultados,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.iris.resultados,list">
                                     <li>95% de entregas dentro del timeline estimado.</li>
                                     <li>Reducción del 20% en retrabajo gracias a refinamientos más eficientes y criterios de aceptación claros.</li>
                                     <li>Mejora del time-to-market en un 25% frente a versiones anteriores.</li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.aprendizajes">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.aprendizajes">
                                     Aprendizajes
                                 </h5>
-                                <p class="text-text-dark" data-translate="proyectos.iris.aprendizajes">
+                                <p class="text-text-dark dark:text-gray-300" data-translate="proyectos.iris.aprendizajes">
                                     El impacto de una entrega predecible y bien coordinada en la confianza del negocio. La importancia de visibilizar avances, riesgos y bloqueos en tiempo real. Y el valor de empoderar a los equipos para que se adueñen de sus entregables.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="text-right mt-4">
-                        <button data-project-id="proyectos2" class="open-project-modal text-primary hover:underline inline-flex items-center" data-translate="proyectos.verMas">
+                        <button data-project-id="proyectos2" class="open-project-modal text-primary dark:text-primary/80 hover:underline inline-flex items-center" data-translate="proyectos.verMas">
                             Ver más
                             <span class="material-symbols-outlined align-middle ml-1 text-lg">add</span>
                         </button>
@@ -379,11 +384,11 @@
                     <div class="md:flex md:items-start project-case-study">
                         <div class="md:w-5/12 mb-6 md:mb-0 md:pr-8 project-image-container">
                             <img src="img/pactia.jpg" alt="Proyecto Pactia"
-                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light project-image" />
+                                class="w-full h-72 object-cover rounded-lg shadow-md border-4 border-bg-light dark:border-gray-700 project-image" />
                         </div>
                          <div class="md:w-7/12 project-description-container">
-                            <div class="project-description">
-                                <h3 class="text-2xl font-semibold mb-2 text-text-dark project-title" data-translate="proyectos.pactia.titulo">
+                            <div class="project-description dark:text-gray-300">
+                                <h3 class="text-2xl font-semibold mb-2 text-text-dark dark:text-bg-light project-title" data-translate="proyectos.pactia.titulo">
                                     Transformación Digital de Pactia
                                 </h3>
                                 <p class="mb-4 project-tags">
@@ -392,17 +397,17 @@
                                     <span
                                         class="inline-block bg-accent/10 text-accent text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">PropTech B2B</span>
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.elReto">El Reto</h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.pactia.reto">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.elReto">El Reto</h5>
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.pactia.reto">
                                     Modernizar la presencia digital de Pactia, una firma líder en gestión de activos inmobiliarios, para alinear su plataforma web con los objetivos estratégicos de negocio, mejorar la experiencia del usuario y optimizar la generación de leads en un entorno altamente competitivo.
                                 </p>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.miRol">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.miRol">
                                     Mi Rol y Acciones Clave
                                 </h5>
-                                <p class="text-text-dark mb-3" data-translate="proyectos.pactia.rol">
+                                <p class="text-text-dark dark:text-gray-300 mb-3" data-translate="proyectos.pactia.rol">
                                     Como Product Owner, lideré la renovación integral de Pactia.com, enfocándome en implementar soluciones tecnológicas que mejoraran la eficiencia operativa y la interacción con los usuarios. Fui responsable desde la definición de la visión del producto hasta la supervisión de su ejecución técnica, asegurando alineación constante con los objetivos corporativos. 
                                 </p>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.pactia.acciones,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.pactia.acciones,list">
                                     <li>
                                         Definí y prioricé el backlog del producto utilizando el marco RICE, asegurando un enfoque estratégico en las funcionalidades de mayor impacto.
                                     </li>
@@ -414,25 +419,25 @@
                                         Gestioné la integración de Vtiger CRM, consolidando la información de clientes y mejorando la eficiencia en la gestión de leads.
                                     </li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.resultados">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.resultados">
                                     Resultados e Impacto
                                 </h5>
-                                <ul class="list-disc list-inside text-text-dark space-y-1 mb-3" data-translate="proyectos.pactia.resultados,list">
+                                <ul class="list-disc list-inside text-text-dark dark:text-gray-300 space-y-1 mb-3" data-translate="proyectos.pactia.resultados,list">
                                     <li>Aumento del 40% en la generación de leads calificados a través del sitio web.</li>
                                     <li>Reducción del 25% en el tiempo de carga del sitio, mejorando la retención de usuarios.</li>
                                     <li>Incremento del 35% en la tasa de conversión de formularios de contacto.</li>
                                 </ul>
-                                <h5 class="text-lg font-semibold mb-1 text-text-dark" data-translate="proyectos.aprendizajes">
+                                <h5 class="text-lg font-semibold mb-1 text-text-dark dark:text-bg-light" data-translate="proyectos.aprendizajes">
                                     Aprendizajes
                                 </h5>
-                                <p class="text-text-dark" data-translate="proyectos.pactia.aprendizajes">
+                                <p class="text-text-dark dark:text-gray-300" data-translate="proyectos.pactia.aprendizajes">
                                     La importancia de una comunicación constante entre equipos técnicos y de negocio para alinear objetivos y expectativas. El valor de una mentalidad centrada en el usuario, usando datos y feedback cualitativo para guiar decisiones de diseño y funcionalidad. La necesidad de una infraestructura tecnológica flexible que se adapte rápidamente a las cambiantes demandas del mercado.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="text-right mt-4">
-                        <button data-project-id="proyectos3" class="open-project-modal text-primary hover:underline inline-flex items-center" data-translate="proyectos.verMas">
+                        <button data-project-id="proyectos3" class="open-project-modal text-primary dark:text-primary/80 hover:underline inline-flex items-center" data-translate="proyectos.verMas">
                             Ver más
                             <span class="material-symbols-outlined align-middle ml-1 text-lg">add</span>
                         </button>
@@ -441,37 +446,37 @@
             </div>
         </section>
 
-        <section id="habilidades" class="py-16 bg-bg-light">
+        <section id="habilidades" class="py-16 bg-bg-light dark:bg-gray-800">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="habilidades.titulo">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="habilidades.titulo">
                     Habilidades
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Gestión de Producto -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
-                        <h4 class="text-xl font-semibold text-text-dark mb-3" data-translate="habilidades.gestionProducto.titulo">Gestión de Producto</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-translate="habilidades.gestionProducto.lista.list">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                        <h4 class="text-xl font-semibold text-text-dark dark:text-bg-light mb-3" data-translate="habilidades.gestionProducto.titulo">Gestión de Producto</h4>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2" data-translate="habilidades.gestionProducto.lista.list">
                             <!-- Items will be populated by JavaScript -->
                         </ul>
                     </div>
                     <!-- Metodologías & Herramientas -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                        <h4 class="text-xl font-semibold text-text-dark mb-3" data-translate="habilidades.metodologias.titulo">Metodologías & Herramientas</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-translate="habilidades.metodologias.lista.list">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="text-xl font-semibold text-text-dark dark:text-bg-light mb-3" data-translate="habilidades.metodologias.titulo">Metodologías & Herramientas</h4>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2" data-translate="habilidades.metodologias.lista.list">
                             <!-- Items will be populated by JavaScript -->
                         </ul>
                     </div>
                     <!-- Habilidades Blandas -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="text-xl font-semibold text-text-dark mb-3" data-translate="habilidades.blandas.titulo">Habilidades Blandas</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-translate="habilidades.blandas.lista.list">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="text-xl font-semibold text-text-dark dark:text-bg-light mb-3" data-translate="habilidades.blandas.titulo">Habilidades Blandas</h4>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2" data-translate="habilidades.blandas.lista.list">
                             <!-- Items will be populated by JavaScript -->
                         </ul>
                     </div>
                     <!-- Lenguajes -->
-                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                        <h4 class="text-xl font-semibold text-text-dark mb-3" data-translate="habilidades.lenguajes.titulo">Lenguajes</h4>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2" data-translate="habilidades.lenguajes.lista.list">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="text-xl font-semibold text-text-dark dark:text-bg-light mb-3" data-translate="habilidades.lenguajes.titulo">Lenguajes</h4>
+                        <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2" data-translate="habilidades.lenguajes.lista.list">
                             <!-- Items will be populated by JavaScript -->
                         </ul>
                     </div>
@@ -479,30 +484,30 @@
             </div>
         </section>
 
-        <section id="educacion" class="py-16 bg-white">
+        <section id="educacion" class="py-16 bg-white dark:bg-bg-dark">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="educacion.titulo">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="educacion.titulo">
                     Educación y Certificaciones
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                     <div data-aos="fade-up" data-aos-delay="100">
-                        <h4 class="text-xl font-semibold mb-2 text-text-dark" data-translate="educacion.ingeniero.titulo">
+                        <h4 class="text-xl font-semibold mb-2 text-text-dark dark:text-bg-light" data-translate="educacion.ingeniero.titulo">
                             Ingeniero de Diseño de Sistemas
                         </h4>
-                        <p class="text-gray-600" data-translate="educacion.ingeniero.institucion">ITM – Institución Universitaria</p>
-                        <p class="text-sm text-gray-500" data-translate="educacion.ingeniero.ano">2020</p>
+                        <p class="text-gray-600 dark:text-gray-400" data-translate="educacion.ingeniero.institucion">ITM – Institución Universitaria</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="educacion.ingeniero.ano">2020</p>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="text-xl font-semibold mb-2 text-text-dark" data-translate="educacion.certificaciones.titulo">
+                        <h4 class="text-xl font-semibold mb-2 text-text-dark dark:text-bg-light" data-translate="educacion.certificaciones.titulo">
                             Certificaciones Clave
                         </h4>
-                        <p class="text-text-dark" data-translate="educacion.certificaciones.smpc">
+                        <p class="text-text-dark dark:text-bg-light" data-translate="educacion.certificaciones.smpc">
                             El Certificado Profesional Scrum Master (SMPC)
                         </p>
-                        <p class="text-text-dark" data-translate="educacion.certificaciones.spopc">
+                        <p class="text-text-dark dark:text-bg-light" data-translate="educacion.certificaciones.spopc">
                             Scrum Product Owner Professional Certificate (SPOPC)
                         </p>
-                        <p class="mt-3 text-sm text-gray-500" data-translate="educacion.certificaciones.formacionContinua">
+                        <p class="mt-3 text-sm text-gray-500 dark:text-gray-400" data-translate="educacion.certificaciones.formacionContinua">
                             + Formación continua en Platzi (Product Management, Growth...)
                         </p>
                     </div>
@@ -510,42 +515,42 @@
             </div>
         </section>
 
-        <section id="testimonios" class="py-16 bg-bg-light">
+        <section id="testimonios" class="py-16 bg-bg-light dark:bg-gray-800">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark" data-aos="fade-up" data-translate="testimonios.titulo">
+                <h2 class="text-center text-3xl font-bold mb-10 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="testimonios.titulo">
                     Lo que dicen de mi trabajo
                 </h2>
                 <div class="max-w-2xl mx-auto relative" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper progress-slide-carousel swiper-container relative bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="swiper progress-slide-carousel swiper-container relative bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide flex items-center">
                                 <div class="p-6 md:p-8 text-center flex flex-col justify-center items-center w-full">
-                                    <p class="italic text-text-dark mb-4" data-translate="testimonios.oscar.cita">
+                                    <p class="italic text-text-dark dark:text-gray-300 mb-4" data-translate="testimonios.oscar.cita">
                                         "[Cita de Oscar] Juan Felipe, demostra una gran capacidad
                                         para entender las necesidades del negocio y traducirlas en
                                         soluciones de producto efectivas. Su liderazgo y enfoque en
                                         datos fueron clave para el éxito del proyecto."
                                     </p>
-                                    <p class="font-semibold text-text-dark" data-translate="testimonios.oscar.nombre">Oscar Mauricio Montoya</p>
-                                    <p class="text-sm text-gray-500" data-translate="testimonios.oscar.cargo">CEO & Cofounder - Movilbox SAS</p>
+                                    <p class="font-semibold text-text-dark dark:text-bg-light" data-translate="testimonios.oscar.nombre">Oscar Mauricio Montoya</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="testimonios.oscar.cargo">CEO & Cofounder - Movilbox SAS</p>
                                 </div>
                             </div>
                             <div class="swiper-slide flex items-center">
                                 <div class="p-6 md:p-8 text-center flex flex-col justify-center items-center w-full">
-                                    <p class="italic text-text-dark mb-4" data-translate="testimonios.paola.cita">
+                                    <p class="italic text-text-dark dark:text-gray-300 mb-4" data-translate="testimonios.paola.cita">
                                         "[Cita de Paola] Juan Fe, tu visión estratégica y tu capacidad para impulsar equipos son activos invaluables. He sido testigo de tu habilidad excepcional para llevar proyectos complejos a resultados exitosos."
                                     </p>
-                                    <p class="font-semibold text-text-dark" data-translate="testimonios.paola.nombre">Delia Paola Varon</p>
-                                    <p class="text-sm text-gray-500" data-translate="testimonios.paola.cargo">Chief Product Officer - Satrack</p>
+                                    <p class="font-semibold text-text-dark dark:text-bg-light" data-translate="testimonios.paola.nombre">Delia Paola Varon</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="testimonios.paola.cargo">Chief Product Officer - Satrack</p>
                                 </div>
                             </div>
                             <div class="swiper-slide flex items-center">
                                 <div class="p-6 md:p-8 text-center flex flex-col justify-center items-center w-full">
-                                    <p class="italic text-text-dark mb-4" data-translate="testimonios.sandra.cita">
+                                    <p class="italic text-text-dark dark:text-gray-300 mb-4" data-translate="testimonios.sandra.cita">
                                         "[Cita de Sandra] Juan, tu agudo análisis y tu determinación para alcanzar tus metas son realmente notables. Además, tu enfoque innovador siempre aporta una perspectiva fresca y valiosa a cada desafío que emprendes."
                                     </p>
-                                    <p class="font-semibold text-text-dark" data-translate="testimonios.sandra.nombre">Sandra Milena Otalvaro</p>
-                                    <p class="text-sm text-gray-500" data-translate="testimonios.sandra.cargo">Directora Juridica Contratación - Pactia SAS</p>
+                                    <p class="font-semibold text-text-dark dark:text-bg-light" data-translate="testimonios.sandra.nombre">Sandra Milena Otalvaro</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400" data-translate="testimonios.sandra.cargo">Directora Juridica Contratación - Pactia SAS</p>
                                 </div>
                             </div>
                         </div>
@@ -555,12 +560,12 @@
             </div>
         </section>
 
-        <section id="contacto" class="py-16 bg-white">
+        <section id="contacto" class="py-16 bg-white dark:bg-bg-dark">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl font-bold mb-4 section-title text-text-dark" data-aos="fade-up" data-translate="contacto.titulo">
+                <h2 class="text-center text-3xl font-bold mb-4 section-title text-text-dark dark:text-bg-light" data-aos="fade-up" data-translate="contacto.titulo">
                     Hablemos
                 </h2>
-                <p class="text-lg text-center text-gray-600 mb-8 section-subtitle" data-aos="fade-up"
+                <p class="text-lg text-center text-gray-600 dark:text-gray-400 mb-8 section-subtitle" data-aos="fade-up"
                     data-aos-delay="100" data-translate="contacto.subtitulo">
                     Estoy abierto a conectar, discutir ideas o explorar oportunidades.
                     ¡Contáctame!
@@ -568,36 +573,36 @@
                 <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                     <form id="contact-form" action="https://formspree.io/f/xvgagknl" method="POST" class="space-y-4">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-text-dark mb-1" data-translate="contacto.form.nombreLabel">Nombre</label>
+                            <label for="name" class="block text-sm font-medium text-text-dark dark:text-bg-light mb-1" data-translate="contacto.form.nombreLabel">Nombre</label>
                             <input type="text" id="name" name="name" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark dark:text-bg-light bg-white dark:bg-gray-700" />
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-text-dark mb-1" data-translate="contacto.form.emailLabel">Correo
+                            <label for="email" class="block text-sm font-medium text-text-dark dark:text-bg-light mb-1" data-translate="contacto.form.emailLabel">Correo
                                 Electrónico</label>
                             <input type="email" id="email" name="email" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark dark:text-bg-light bg-white dark:bg-gray-700" />
                         </div>
                         <div>
-                            <label for="subject" class="block text-sm font-medium text-text-dark mb-1" data-translate="contacto.form.asuntoLabel">Asunto</label>
+                            <label for="subject" class="block text-sm font-medium text-text-dark dark:text-bg-light mb-1" data-translate="contacto.form.asuntoLabel">Asunto</label>
                             <input type="text" id="subject" name="subject"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white" />
+                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark dark:text-bg-light bg-white dark:bg-gray-700" />
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-text-dark mb-1" data-translate="contacto.form.mensajeLabel">Mensaje</label>
+                            <label for="message" class="block text-sm font-medium text-text-dark dark:text-bg-light mb-1" data-translate="contacto.form.mensajeLabel">Mensaje</label>
                             <textarea id="message" name="message" rows="4" required
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark bg-white"></textarea>
+                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-primary/50 focus:border-primary text-text-dark dark:text-bg-light bg-white dark:bg-gray-700"></textarea>
                         </div>
                         <button type="submit" class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out bg-primary text-white hover:bg-primary/90 w-full main-cta" data-translate="contacto.form.enviarBoton">
                             Enviar Mensaje
                         </button>
                     </form>
                     <div id="form-status" class="mt-4 text-center"></div>
-                    <div id="success-alert" class="hidden mt-4 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+                    <div id="success-alert" class="hidden mt-4 p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-gray-700 dark:text-green-400" role="alert">
                         <span class="font-medium" data-translate="contacto.form.exitoTitulo">¡Éxito!</span> <span data-translate="contacto.form.exitoMensaje">Tu mensaje ha sido enviado correctamente.</span>
                     </div>
                     <div class="text-center mt-8 contact-links">
-                        <p class="text-text-dark mb-3" data-translate="contacto.encuentrameEn">O encuéntrame en:</p>
+                        <p class="text-text-dark dark:text-bg-light mb-3" data-translate="contacto.encuentrameEn">O encuéntrame en:</p>
                         <div class="flex justify-center space-x-3">
                             <a href="mailto:lipebuiles@icloud.com"
                                 class="inline-block px-4 py-2 rounded font-semibold text-center transition duration-200 ease-in-out border border-accent text-accent hover:bg-accent hover:text-white inline-flex items-center" data-translate="contacto.emailLink">
@@ -614,7 +619,7 @@
         </section>
     </main>
 
-    <footer class="py-4 text-center text-gray-500 bg-bg-light border-t border-gray-300">
+    <footer class="py-4 text-center text-gray-500 dark:text-gray-400 bg-bg-light dark:bg-gray-800 border-t border-gray-300 dark:border-gray-700">
         <div class="container mx-auto px-4">
             <p class="mb-0" data-translate="footer.derechos">
                 &copy; <span id="currentYear"></span> Juan Felipe Builes. Todos
@@ -625,10 +630,10 @@
     </footer>
 
     <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-[100] hidden">
-        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden relative p-6 md:p-8 flex flex-col">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-3xl leading-none z-10">&times;</button>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden relative p-6 md:p-8 flex flex-col">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white text-3xl leading-none z-10">&times;</button>
             <div class="flex-1 min-h-0">
-                <div id="modal-project-description" class="w-full overflow-y-auto pr-4 max-h-[75vh]">
+                <div id="modal-project-description" class="w-full overflow-y-auto pr-4 max-h-[75vh] dark:text-gray-300">
                 </div>
             </div>
         </div>
