@@ -141,4 +141,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Fin Lógica del Modal ---
 
+    // --- Lógica del Carrusel de Testimonios (Swiper) ---
+    try {
+        const testimonialSwiper = new Swiper('.progress-slide-carousel', {
+            // Opciones de Swiper
+            loop: true, // Opcional: para que el carrusel sea infinito
+            autoplay: {
+                delay: 5000, // Cambia cada 5 segundos
+                disableOnInteraction: false, // No detener al interactuar
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar', // Usar barra de progreso como paginación
+            },
+            // No necesitamos botones de navegación por ahora
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+        });
+    } catch (e) {
+        console.error("Error inicializando Swiper para testimonios:", e);
+    }
+    // --- Fin Lógica del Carrusel de Testimonios ---
+
 });

@@ -48,6 +48,19 @@
 }
 
 /* Estilos del Modal (Tailwind maneja la mayoría) */
-#project-modal .bg-white {
+/* #project-modal .bg-white { */
     /* Clases de Tailwind (max-h-[90vh] overflow-hidden flex flex-col) manejan esto */
+/* } */
+
+/* Estilos para la paginación de barra de progreso de Swiper */
+.swiper-pagination-progressbar {
+    background: rgba(0, 0, 0, 0.1); /* Color de fondo de la barra */
+    height: 4px; /* Grosor de la barra */
+    border-radius: 2px;
+    /* El contenedor div.swiper-pagination en HTML se encarga del posicionamiento y ancho */
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #128c7e; /* Color primario para el progreso */
+    border-radius: 2px;
 }
