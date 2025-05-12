@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     el.innerHTML = textToSet.map(item => `<li>${item}</li>`).join('');
                 } else if (typeof textToSet === 'string') {
                     // Use existing logic for determining whether to use innerHTML or textContent
-                    if (actualKey.includes('descripcion') || actualKey.includes('subtitulo') || actualKey.includes('derechos') || (el.tagName === 'STRONG' && el.parentElement.dataset.translate)) {
+                    if (actualKey.includes('descripcion') || actualKey.includes('subtitulo') || actualKey.includes('derechos') || (el.tagName === 'STRONG' && el.parentElement.dataset.translate) || actualKey === 'blog.leerMas') {
                         el.innerHTML = textToSet;
                     } else {
                         el.textContent = textToSet;

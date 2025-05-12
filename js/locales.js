@@ -9,6 +9,7 @@ const translations = {
         "nav.educacion": "Educación",
         "nav.testimonios": "Testimonios",
         "nav.contacto": "Contacto",
+        "nav.blog": "Blog",
 
         // Hero Section (Inicio)
         "inicio.nombre": "Juan Felipe Builes",
@@ -186,7 +187,14 @@ const translations = {
 
         // Footer
         "footer.derechos": "&copy; <span id=\"currentYear\"></span> Juan Felipe Builes. Todos los derechos reservados.",
-        "footer.ubicacion": "Medellín, Colombia"
+        "footer.ubicacion": "Medellín, Colombia",
+
+        // Blog Page
+        "blog.titulo": "Mis Publicaciones",
+        "blog.post1.titulo": "Entre el pulso y la pausa: Redefiniendo el éxito desde lo humano",
+        "blog.post1.fechaLabel": "Fecha de publicación:",
+        "blog.post1.resumen": "Una reflexión sobre cómo encontrar un equilibrio más humano y sostenible en nuestra búsqueda del éxito, yendo más allá de las métricas tradicionales.",
+        "blog.leerMas": "Leer más &rarr;"
     },
     en: {
         // Navbar
@@ -198,6 +206,7 @@ const translations = {
         "nav.educacion": "Education",
         "nav.testimonios": "Testimonials",
         "nav.contacto": "Contact",
+        "nav.blog": "Blog",
 
         // Hero Section (Inicio)
         "inicio.nombre": "Juan Felipe Builes",
@@ -375,6 +384,13 @@ const translations = {
 
         // Footer
         "footer.derechos": "&copy; <span id=\"currentYear\"></span> Juan Felipe Builes. All rights reserved.",
-        "footer.ubicacion": "Medellin, Colombia"
+        "footer.ubicacion": "Medellin, Colombia",
+
+        // Blog Page
+        "blog.titulo": "My Publications",
+        "blog.post1.titulo": "Between the pulse and the pause: Redefining success from a human perspective",
+        "blog.post1.fechaLabel": "Publication date:",
+        "blog.post1.resumen": "A reflection on how to find a more human and sustainable balance in our pursuit of success, going beyond traditional metrics.",
+        "blog.leerMas": "Read more &rarr;"
     }
 };
