@@ -204,10 +204,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
     const successAlert = document.getElementById('success-alert');
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const loaderModal = document.getElementById('loader-modal'); // Get loader modal
 
     async function handleSubmit(event) {
         event.preventDefault();
         const data = new FormData(event.target);
+
+        // Show loader modal and disable button
+        if (loaderModal) {
+            loaderModal.classList.remove('hidden');
+        }
+        if (submitButton) {
+            submitButton.disabled = true;
+        }
+
+        // Set a 3-second timer to hide the loader and re-enable the button
+        setTimeout(() => {
+            if (loaderModal) {
+                loaderModal.classList.add('hidden');
+            }
+            if (submitButton) {
+                submitButton.disabled = false;
+            }
+        }, 3000);
+
         fetch(event.target.action, {
             method: contactForm.method,
             body: data,
@@ -217,7 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).then(response => {
             if (response.ok) {
                 successAlert.classList.remove('hidden');
-                // Optionally, update text content based on language
                 const currentLang = localStorage.getItem('preferredLang') || 'es';
                 const successTitle = successAlert.querySelector('span[data-translate="contacto.form.exitoTitulo"]');
                 const successMessage = successAlert.querySelector('span[data-translate="contacto.form.exitoMensaje"]');
@@ -231,11 +251,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactForm.reset();
                 setTimeout(() => {
                     successAlert.classList.add('hidden');
-                }, 5000); // Hide after 5 seconds
+                }, 5000); // Hide success alert after 5 seconds
             } else {
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
-                        formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ");
                     } else {
                         formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
                         const currentLang = localStorage.getItem('preferredLang') || 'es';
@@ -243,6 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
                            formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
                         }
                     }
+                    // Clear error message after 7 seconds
+                    setTimeout(() => {
+                        formStatus.innerHTML = ''; 
+                    }, 7000);
                 })
             }
         }).catch(error => {
@@ -251,6 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
                 formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
             }
+            // Clear error message after 7 seconds
+            setTimeout(() => {
+                formStatus.innerHTML = ''; 
+            }, 7000);
         });
     }
     contactForm.addEventListener("submit", handleSubmit)

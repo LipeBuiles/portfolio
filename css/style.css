@@ -72,3 +72,155 @@
     text-overflow: ellipsis; /* Add an ellipsis (...) to indicate truncated text */
     /* Ensure list items still have some vertical spacing if needed, though space-y-2 on ul should handle it */
 }
+
+/* Styles for new social media buttons in contact section */
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.social-links, .flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  font-family: 'Titillium Web', sans-serif;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  background: white;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+  text-decoration: none; /* Ensure links don't have underlines */
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+  color: #333; /* Ensure text color matches */
+}
+
+.social-btn:hover {
+  width: 200px; /* Adjusted width to accommodate longer text */
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: auto; /* Allow span to take necessary width */
+  min-width: 80px; /* Minimum width for the text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* #twitter svg { -- Not used in this implementation
+  fill: #1da1f2;
+} */
+
+#linkedin svg {
+  fill: #0e76a8;
+}
+
+#github svg { /* Corrected: fill should be on svg, not the parent */
+  fill: #333;
+}
+
+#email svg {
+  fill: #c71610; /* Example: Gmail red, can be changed */
+}
+
+/* Ensure dark mode compatibility for button background and text if needed */
+.dark .social-btn {
+  background: #2d3748; /* Example dark background: gray-800 */
+  color: #f7fafc; /* Example dark text: gray-100 */
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.3); /* Darker shadow for dark mode */
+}
+
+.dark .social-btn span {
+  color: #f7fafc; /* Example dark text for span */
+}
+
+.dark #github svg {
+  fill: #f7fafc; /* White fill for GitHub icon in dark mode */
+}
+
+/* Keep LinkedIn blue in dark mode */
+.dark #linkedin svg {
+  fill: #0e76a8;
+}
+
+/* Keep Email color in dark mode, or adjust if needed */
+.dark #email svg {
+  fill: #c71610; /* Or a lighter shade if preferred for dark mode */
+}
+
+/* Styles for the contact form submit button */
+/* From Uiverse.io by wang3616359git */
+.bt {
+  /* Most properties are now handled by Tailwind CSS */
+  user-select: none; /* This might still be useful */
+  text-align: center; /* Ensure text is centered if not covered by Tailwind */
+  transition: all 0.2s ease; /* Transition managed by Tailwind */
+  position: relative; /* Keep for potential future animations if the span is used */
+}
+
+/* New Modal Loader Styles */
+#loader-modal .relative {
+  width: 72px; /* Original: 24px * 3 = 72px */
+  height: 72px; /* Original: 24px * 3 = 72px */
+  position: relative; /* Ensure this is explicitly set for ::before positioning */
+}
+
+/* Paper airplane loader - increased size and primary color */
+.msg-loader {
+  display: block; /* Was already block in .main-cta.is-loading .msg */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  /* Right-pointing triangle airplane - scaled up */
+  border-top: 15px solid transparent; /* Original: 5px * 3 = 15px */
+  border-bottom: 15px solid transparent; /* Original: 5px * 3 = 15px */
+  border-left: 27px solid #128c7e; /* Original: 9px * 3 = 27px, Color: primary */
+  transform-origin: center center;
+  animation: flyInCircleLoaderModal 1s linear infinite; /* Renamed animation for clarity if needed, or keep same */
+}
+
+/* Circular path line for the loader - increased size and gradient border */
+#loader-modal .relative::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 84px; /* Original: 28px * 3 = 84px */
+  height: 84px; /* Original: 28px * 3 = 84px */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  /* Gradient border for the path */
+  border: 3px dashed transparent; /* Base for gradient, increased thickness */
+  background-image: linear-gradient(white, white), conic-gradient(from 0deg, #128c7e, #128c7e40, #128c7e); /* Primary color gradient */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  opacity: 0.7;
+}
+
+/* Adjusted Keyframes for larger circle */
+@keyframes flyInCircleLoaderModal { /* Renamed to avoid conflict if old one is still somewhere, or ensure old one is fully removed */
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(36px) rotate(90deg); /* Radius: 12px * 3 = 36px */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(36px) rotate(90deg); /* Radius: 12px * 3 = 36px */
+  }
+}
