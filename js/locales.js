@@ -194,7 +194,10 @@ const translations = {
         "blog.post1.titulo": "Entre el pulso y la pausa: Redefiniendo el éxito desde lo humano",
         "blog.post1.fechaLabel": "Fecha de publicación:",
         "blog.post1.resumen": "Una reflexión sobre cómo encontrar un equilibrio más humano y sostenible en nuestra búsqueda del éxito, yendo más allá de las métricas tradicionales.",
-        "blog.leerMas": "Leer más &rarr;"
+        "blog.leerMas": "Leer más &rarr;",
+        "blog.post2.titulo": "Zona 2: El arte de avanzar sin correr",
+        "blog.post2.fechaLabel": "Fecha de publicación:",
+        "blog.post2.resumen": "Descubre cómo el entrenamiento en Zona 2 puede ser la clave para mejorar tu resistencia, salud y bienestar general, sin necesidad de llegar al agotamiento."
     },
     en: {
         // Navbar
@@ -391,6 +394,9 @@ const translations = {
         "blog.post1.titulo": "Between the pulse and the pause: Redefining success from a human perspective",
         "blog.post1.fechaLabel": "Publication date:",
         "blog.post1.resumen": "A reflection on how to find a more human and sustainable balance in our pursuit of success, going beyond traditional metrics.",
-        "blog.leerMas": "Read more &rarr;"
+        "blog.leerMas": "Read more &rarr;",
+        "blog.post2.titulo": "Zone 2: The art of progressing without sprinting",
+        "blog.post2.fechaLabel": "Publication date:",
+        "blog.post2.resumen": "Discover how Zone 2 training can be the key to improving your endurance, health, and general well-being, without needing to reach exhaustion."
     }
 };
