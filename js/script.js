@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggleButton = document.getElementById('theme-toggle');
     const lightIcon = document.getElementById('theme-toggle-light-icon'); // Changed from sunIcon and theme-toggle-sun-icon
     const darkIcon = document.getElementById('theme-toggle-dark-icon'); // Changed from moonIcon and theme-toggle-moon-icon
+    const downloadCvButton = document.getElementById('download-cv-button');
 
     // Function to update texts based on selected language
     function updateTexts(lang) {
@@ -283,4 +284,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     contactForm.addEventListener("submit", handleSubmit)
 
+    // CV Download Functionality
+    if (downloadCvButton) {
+        downloadCvButton.addEventListener('click', () => {
+            const currentLang = localStorage.getItem('preferredLang') || 'es';
+            let cvPath = '';
+            if (currentLang === 'es') {
+                cvPath = 'docs/Juan_Felipe_Builes_CV_Lider_Producto_ES.pdf';
+            } else {
+                cvPath = 'docs/Juan_Felipe_Builes_CV_Lider_Producto_EN.pdf';
+            }
+            const link = document.createElement('a');
+            link.href = cvPath;
+            link.download = cvPath.split('/').pop(); // Extracts filename from path
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    } else {
+        console.error("Download CV button #download-cv-button not found!");
+    }
 });
