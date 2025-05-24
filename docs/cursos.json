@@ -1,6 +1,6 @@
 [
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/11967-course/diploma-og/og.jpeg",
+    "imagen": "img/11967.jpeg",
     "nombre": "Curso de Gestión de Proyectos con Jira",
     "nombre_en": "Project Management with Jira Course",
     "fecha_aprobacion": "Aprobado el 31 de marzo, 2025",
@@ -8,7 +8,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/11967-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/11289-course/diploma-og/og.jpeg",
+    "imagen": "img/11289.jpeg",
     "nombre": "Curso de Despliegue de Aplicaciones Python en la Nube",
     "nombre_en": "Deploying Python Applications in the Cloud Course",
     "fecha_aprobacion": "Aprobado el 6 de enero, 2025",
@@ -16,7 +16,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/11289-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1600-course/diploma-og/og.jpeg",
+    "imagen": "img/1600.jpeg",
     "nombre": "Curso de Gestión y Liderazgo en Diseño",
     "nombre_en": "Design Management and Leadership Course",
     "fecha_aprobacion": "Aprobado el 30 de octubre, 2024",
@@ -24,7 +24,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1600-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2000-course/diploma-og/og.jpeg",
+    "imagen": "img/2000.jpeg",
     "nombre": "Curso de Liderazgo Creativo",
     "nombre_en": "Creative Leadership Course",
     "fecha_aprobacion": "Aprobado el 28 de octubre, 2024",
@@ -32,7 +32,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2000-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2917-course/diploma-og/og.jpeg",
+    "imagen": "img/2917.jpeg",
     "nombre": "Audiocurso de Liderazgo para Equipos Creativos",
     "nombre_en": "Audio Course: Leadership for Creative Teams",
     "fecha_aprobacion": "Aprobado el 27 de octubre, 2024",
@@ -40,7 +40,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2917-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2060-course/diploma-og/og.jpeg",
+    "imagen": "img/2060.jpeg",
     "nombre": "Curso de Comunicación Efectiva para Equipos de Trabajo",
     "nombre_en": "Effective Communication for Teams Course",
     "fecha_aprobacion": "Aprobado el 25 de octubre, 2024",
@@ -48,7 +48,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2060-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2416-course/diploma-og/og.jpeg",
+    "imagen": "img/2416.png",
     "nombre": "Curso de Product Management",
     "nombre_en": "Product Management Course",
     "fecha_aprobacion": "Aprobado el 11 de octubre, 2024",
@@ -56,7 +56,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2416-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1747-course/diploma-og/og.jpeg",
+    "imagen": "img/1747.jpeg",
     "nombre": "Curso de Estrategias UX para Empresas",
     "nombre_en": "UX Strategies for Companies Course",
     "fecha_aprobacion": "Aprobado el 8 de octubre, 2024",
@@ -64,7 +64,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1747-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/7732-course/diploma-og/og.jpeg",
+    "imagen": "img/7732.png",
     "nombre": "Curso para Implementar Design Ops en tu organización",
     "nombre_en": "Course for Implementing Design Ops in Your Organization",
     "fecha_aprobacion": "Aprobado el 7 de octubre, 2024",
@@ -72,7 +72,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/7732-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/7961-course/diploma-og/og.jpeg",
+    "imagen": "img/7961.jpeg",
     "nombre": "Curso de Inteligencia Artificial para Product Discovery y Product Design: Herramientas y Técnicas",
     "nombre_en": "Artificial Intelligence for Product Discovery and Product Design: Tools and Techniques Course",
     "fecha_aprobacion": "Aprobado el 6 de octubre, 2024",
@@ -80,7 +80,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/7961-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2592-course/diploma-og/og.jpeg",
+    "imagen": "img/2592.jpeg",
     "nombre": "Curso para Gestionar un Sistema de Diseño como Product Manager",
     "nombre_en": "Course for Managing a Design System as a Product Manager",
     "fecha_aprobacion": "Aprobado el 2 de octubre, 2024",
@@ -88,7 +88,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2592-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1713-course/diploma-og/og.jpeg",
+    "imagen": "img/1713.png",
     "nombre": "Curso de Gestión de Procesos UX",
     "nombre_en": "UX Process Management Course",
     "fecha_aprobacion": "Aprobado el 29 de septiembre, 2024",
@@ -96,7 +96,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1713-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4624-course/diploma-og/og.jpeg",
+    "imagen": "img/4624.jpeg",
     "nombre": "Curso de Fundamentos de Métricas para Retención de Usuarios",
     "nombre_en": "Fundamentals of Metrics for User Retention Course",
     "fecha_aprobacion": "Aprobado el 18 de septiembre, 2024",
@@ -104,7 +104,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4624-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1928-course/diploma-og/og.jpeg",
+    "imagen": "img/1928.png",
     "nombre": "Curso de Thick Data en Negocios",
     "nombre_en": "Thick Data in Business Course",
     "fecha_aprobacion": "Aprobado el 13 de septiembre, 2024",
@@ -112,7 +112,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1928-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1659-course/diploma-og/og.jpeg",
+    "imagen": "img/1659.jpeg",
     "nombre": "Curso de CX Research y UX Testing",
     "nombre_en": "CX Research and UX Testing Course",
     "fecha_aprobacion": "Aprobado el 31 de agosto, 2024",
@@ -120,7 +120,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1659-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/8781-course/diploma-og/og.jpeg",
+    "imagen": "img/8781.png",
     "nombre": "Curso de Docker: Fundamentos",
     "nombre_en": "Docker Fundamentals Course",
     "fecha_aprobacion": "Aprobado el 26 de agosto, 2024",
@@ -128,7 +128,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/8781-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2403-course/diploma-og/og.jpeg",
+    "imagen": "img/2403.png",
     "nombre": "Audiocurso de Fundamentos para Product Managers",
     "nombre_en": "Audio Course: Fundamentals for Product Managers",
     "fecha_aprobacion": "Aprobado el 22 de julio, 2024",
@@ -136,7 +136,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2403-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/3897-course/diploma-og/og.jpeg",
+    "imagen": "img/3897.png",
     "nombre": "Audiocurso de Métricas en Product Design",
     "nombre_en": "Audio Course: Metrics in Product Design",
     "fecha_aprobacion": "Aprobado el 20 de julio, 2024",
@@ -144,7 +144,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/3897-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1429-course/diploma-og/og.jpeg",
+    "imagen": "img/1429.png",
     "nombre": "Curso de Lean UX Práctico",
     "nombre_en": "Practical Lean UX Course",
     "fecha_aprobacion": "Aprobado el 13 de julio, 2024",
@@ -152,7 +152,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1429-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4038-course/diploma-og/og.jpeg",
+    "imagen": "img/4038.jpeg",
     "nombre": "Curso Básico de Figma - 2022",
     "nombre_en": "Basic Figma Course - 2022",
     "fecha_aprobacion": "Aprobado el 28 de mayo, 2024",
@@ -160,7 +160,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4038-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1400-course/diploma-og/og.jpeg",
+    "imagen": "img/1400.jpeg",
     "nombre": "Curso de Trello",
     "nombre_en": "Trello Course",
     "fecha_aprobacion": "Aprobado el 28 de febrero, 2024",
@@ -168,7 +168,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1400-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1951-course/diploma-og/og.jpeg",
+    "imagen": "img/1951.png",
     "nombre": "Curso de Slack para Mejorar tu Comunicación Online",
     "nombre_en": "Slack Course to Improve Your Online Communication",
     "fecha_aprobacion": "Aprobado el 28 de febrero, 2024",
@@ -176,7 +176,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1951-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4953-course/diploma-og/og.jpeg",
+    "imagen": "img/4953.png",
     "nombre": "Curso de Notion",
     "nombre_en": "Notion Course",
     "fecha_aprobacion": "Aprobado el 28 de febrero, 2024",
@@ -184,7 +184,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4953-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4600-course/diploma-og/og.jpeg",
+    "imagen": "img/4600.jpeg",
     "nombre": "Curso Avanzado de OKRs para Managers",
     "nombre_en": "Advanced OKRs for Managers Course",
     "fecha_aprobacion": "Aprobado el 11 de diciembre, 2023",
@@ -192,7 +192,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4600-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4128-course/diploma-og/og.jpeg",
+    "imagen": "img/4128.png",
     "nombre": "Curso de Gestión de Equipos Ágiles",
     "nombre_en": "Agile Team Management Course",
     "fecha_aprobacion": "Aprobado el 27 de noviembre, 2023",
@@ -200,7 +200,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4128-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/4129-course/diploma-og/og.jpeg",
+    "imagen": "img/4129.jpeg",
     "nombre": "Curso de Scrum Master",
     "nombre_en": "Scrum Master Course",
     "fecha_aprobacion": "Aprobado el 27 de noviembre, 2023",
@@ -208,7 +208,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/4129-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/7923-course/diploma-og/og.jpeg",
+    "imagen": "img/7923.png",
     "nombre": "Curso de Agile Delivery Management: Proyectos Enfocados en Resultados",
     "nombre_en": "Agile Delivery Management: Results-Focused Projects Course",
     "fecha_aprobacion": "Aprobado el 25 de noviembre, 2023",
@@ -216,7 +216,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/7923-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/8040-course/diploma-og/og.jpeg",
+    "imagen": "img/8040.png",
     "nombre": "Curso de Design Thinking",
     "nombre_en": "Design Thinking Course",
     "fecha_aprobacion": "Aprobado el 31 de octubre, 2023",
@@ -224,7 +224,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/8040-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/3403-course/diploma-og/og.jpeg",
+    "imagen": "img/3403.jpeg",
     "nombre": "Curso de Resolución de Conflictos",
     "nombre_en": "Conflict Resolution Course",
     "fecha_aprobacion": "Aprobado el 25 de septiembre, 2022",
@@ -232,7 +232,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/3403-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/3146-course/diploma-og/og.jpeg",
+    "imagen": "img/3146.png",
     "nombre": "Curso de OKRs: Herramienta Clave para Managers",
     "nombre_en": "OKRs: Key Tool for Managers Course",
     "fecha_aprobacion": "Aprobado el 14 de junio, 2022",
@@ -240,7 +240,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/3146-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2947-course/diploma-og/og.jpeg",
+    "imagen": "img/2947.jpeg",
     "nombre": "Curso de PHP: Integración con HTML",
     "nombre_en": "PHP: HTML Integration Course",
     "fecha_aprobacion": "Aprobado el 31 de mayo, 2022",
@@ -248,7 +248,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2947-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1961-course/diploma-og/og.jpeg",
+    "imagen": "img/1961.jpeg",
     "nombre": "Curso de Figma - 2020",
     "nombre_en": "Figma Course - 2020",
     "fecha_aprobacion": "Aprobado el 15 de mayo, 2022",
@@ -256,7 +256,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1961-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/3105-course/diploma-og/og.jpeg",
+    "imagen": "img/3105.jpeg",
     "nombre": "Proyecto del #PlatziChallenge Datacademy 2022",
     "nombre_en": "#PlatziChallenge Datacademy 2022 Project",
     "fecha_aprobacion": "Aprobado el 6 de mayo, 2022",
@@ -264,7 +264,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/3105-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2991-course/diploma-og/og.jpeg",
+    "imagen": "img/2991.jpeg",
     "nombre": "Curso de Tokens en Ethereum: Fundamentos",
     "nombre_en": "Ethereum Tokens: Fundamentals Course",
     "fecha_aprobacion": "Aprobado el 4 de mayo, 2022",
@@ -272,7 +272,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2991-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2397-course/diploma-og/og.jpeg",
+    "imagen": "img/2397.png",
     "nombre": "Curso Profesional de Python",
     "nombre_en": "Professional Python Course",
     "fecha_aprobacion": "Aprobado el 2 de mayo, 2022",
@@ -280,7 +280,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2397-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2197-course/diploma-og/og.jpeg",
+    "imagen": "img/2197.jpeg.png",
     "nombre": "Curso de Tableau: Visualización de Datos y Storytelling para Negocios",
     "nombre_en": "Tableau: Data Visualization and Storytelling for Business Course",
     "fecha_aprobacion": "Aprobado el 28 de abril, 2022",
@@ -288,7 +288,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2197-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2327-course/diploma-og/og.jpeg",
+    "imagen": "img/2327.png",
     "nombre": "Curso Práctico de JavaScript",
     "nombre_en": "Practical JavaScript Course",
     "fecha_aprobacion": "Aprobado el 19 de abril, 2022",
@@ -296,7 +296,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2327-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1814-course/diploma-og/og.jpeg",
+    "imagen": "img/1814.jpeg",
     "nombre": "Curso Básico de JavaScript",
     "nombre_en": "Basic JavaScript Course",
     "fecha_aprobacion": "Aprobado el 8 de abril, 2022",
@@ -304,7 +304,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1814-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2195-course/diploma-og/og.jpeg",
+    "imagen": "img/2195.png",
     "nombre": "Curso de Principios de Visualización de Datos para Business Intelligence (2021)",
     "nombre_en": "Data Visualization Principles for Business Intelligence Course (2021)",
     "fecha_aprobacion": "Aprobado el 18 de marzo, 2022",
@@ -312,7 +312,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2195-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2822-course/diploma-og/og.jpeg",
+    "imagen": "img/2822.png",
     "nombre": "Curso Gratis de Marca Personal",
     "nombre_en": "Free Personal Branding Course",
     "fecha_aprobacion": "Aprobado el 14 de marzo, 2022",
@@ -320,7 +320,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2822-course/diploma/detalle/"
   },
   {
-    "imagen": "img/og.png",
+    "imagen": "img/2807.png",
     "nombre": "Guía para Empezar una Carrera en Data Science e Inteligencia Artificial",
     "nombre_en": "Guide to Starting a Career in Data Science and Artificial Intelligence",
     "fecha_aprobacion": "Aprobado el 11 de marzo, 2022",
@@ -328,7 +328,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2807-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2359-course/diploma-og/og.jpeg",
+    "imagen": "img/2359.png",
     "nombre": "Curso de Business Intelligence: Utilidad y Áreas de Oportunidad",
     "nombre_en": "Business Intelligence: Utility and Opportunity Areas Course",
     "fecha_aprobacion": "Aprobado el 10 de marzo, 2022",
@@ -336,7 +336,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2359-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2681-course/diploma-og/og.jpeg",
+    "imagen": "img/2681.png",
     "nombre": "Datacademy",
     "nombre_en": "Datacademy",
     "fecha_aprobacion": "Aprobado el 4 de marzo, 2022",
@@ -344,7 +344,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2681-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2255-course/diploma-og/og.jpeg",
+    "imagen": "img/2255.jpeg",
     "nombre": "Curso de Python Intermedio: Comprehensions, Lambdas y Manejo de Errores",
     "nombre_en": "Intermediate Python: Comprehensions, Lambdas, and Error Handling Course",
     "fecha_aprobacion": "Aprobado el 1 de marzo, 2022",
@@ -352,7 +352,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2255-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1474-course/diploma-og/og.jpeg",
+    "imagen": "img/1474.jpeg",
     "nombre": "Curso de Programación Orientada a Objetos: POO",
     "nombre_en": "Object-Oriented Programming: OOP Course",
     "fecha_aprobacion": "Aprobado el 25 de febrero, 2022",
@@ -360,7 +360,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1474-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1557-course/diploma-og/og.jpeg",
+    "imagen": "img/1557.jpeg",
     "nombre": "Curso Profesional de Git y GitHub",
     "nombre_en": "Professional Git and GitHub Course",
     "fecha_aprobacion": "Aprobado el 8 de febrero, 2022",
@@ -368,7 +368,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1557-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2692-course/diploma-og/og.jpeg",
+    "imagen": "img/2692.jpeg",
     "nombre": "Curso de Herramientas y Frameworks Intermedias para Product Owners",
     "nombre_en": "Intermediate Tools and Frameworks for Product Owners Course",
     "fecha_aprobacion": "Aprobado el 26 de enero, 2022",
@@ -376,7 +376,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2692-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1967-course/diploma-og/og.jpeg",
+    "imagen": "img/1967.jpeg",
     "nombre": "Curso de Gestión de Equipos Ágiles",
     "nombre_en": "Agile Team Management Course",
     "fecha_aprobacion": "Aprobado el 24 de enero, 2022",
@@ -384,7 +384,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1967-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2618-course/diploma-og/og.jpeg",
+    "imagen": "img/2618.jpeg",
     "nombre": "Curso de Fundamentos de Product Owner",
     "nombre_en": "Product Owner Fundamentals Course",
     "fecha_aprobacion": "Aprobado el 20 de enero, 2022",
@@ -392,7 +392,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2618-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2616-course/diploma-og/og.jpeg",
+    "imagen": "img/2616.jpeg",
     "nombre": "Curso de Historias de Usuario en Scrum",
     "nombre_en": "User Stories in Scrum Course",
     "fecha_aprobacion": "Aprobado el 19 de enero, 2022",
@@ -400,7 +400,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2616-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2292-course/diploma-og/og.jpeg",
+    "imagen": "img/2292.jpeg",
     "nombre": "Curso de Introducción a la Terminal y Línea de Comandos",
     "nombre_en": "Introduction to Terminal and Command Line Course",
     "fecha_aprobacion": "Aprobado el 31 de diciembre, 2021",
@@ -408,7 +408,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2292-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2434-course/diploma-og/og.jpeg",
+    "imagen": "img/2434.jpeg",
     "nombre": "Curso de Entorno de Trabajo para Ciencia de Datos con Jupyter Notebooks y Anaconda",
     "nombre_en": "Data Science Work Environment with Jupyter Notebooks and Anaconda Course",
     "fecha_aprobacion": "Aprobado el 20 de diciembre, 2021",
@@ -416,7 +416,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2434-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1925-course/diploma-og/og.jpeg",
+    "imagen": "img/1925.jpeg",
     "nombre": "Curso de Excel Básico",
     "nombre_en": "Basic Excel Course",
     "fecha_aprobacion": "Aprobado el 16 de diciembre, 2021",
@@ -424,7 +424,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1925-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1393-course/diploma-og/og.jpeg",
+    "imagen": "img/1393.jpeg",
     "nombre": "Curso de Fundamentos de Matemáticas",
     "nombre_en": "Math Fundamentals Course",
     "fecha_aprobacion": "Aprobado el 16 de diciembre, 2021",
@@ -432,7 +432,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1393-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/2069-course/diploma-og/og.jpeg",
+    "imagen": "img/2069.jpeg",
     "nombre": "Curso de Análisis de Negocios para Ciencia de Datos",
     "nombre_en": "Business Analysis for Data Science Course",
     "fecha_aprobacion": "Aprobado el 12 de diciembre, 2021",
@@ -440,7 +440,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/2069-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1937-course/diploma-og/og.jpeg",
+    "imagen": "img/1937.jpeg",
     "nombre": "Curso Básico de Python",
     "nombre_en": "Basic Python Course",
     "fecha_aprobacion": "Aprobado el 7 de diciembre, 2021",
@@ -448,7 +448,7 @@
     "link": "https://platzi.com/p/LipeBuiles/curso/1937-course/diploma/detalle/"
   },
   {
-    "imagen": "https://platzi.com/LipeBuiles/curso/1750-course/diploma-og/og.jpeg",
+    "imagen": "img/1750.jpeg",
     "nombre": "Curso Profesional de Scrum",
     "nombre_en": "Professional Scrum Course",
     "fecha_aprobacion": "Aprobado el 7 de diciembre, 2021",
