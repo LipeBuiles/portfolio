@@ -103,50 +103,67 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Swiper initialization for testimonials
-    new Swiper('.progress-slide-carousel', {
-        loop: true,
-        autoplay: {
-            delay: 8000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'progressbar',
-        },
-        slidesPerView: 1,
-        spaceBetween: 20,
-    });
+    // Check if Swiper is defined and the target element exists
+    if (typeof Swiper !== 'undefined' && document.querySelector('.progress-slide-carousel')) {
+        new Swiper('.progress-slide-carousel', {
+            loop: true,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+        });
+    } else {
+        // console.warn("Swiper library not loaded or .progress-slide-carousel element not found. Testimonial slider will not be initialized on this page.");
+    }
 
     // Project Modal Functionality
     const projectModal = document.getElementById('project-modal');
     const closeModalButton = document.getElementById('close-modal-button');
     const modalProjectDescription = document.getElementById('modal-project-description');
+    const openProjectModalButtons = document.querySelectorAll('.open-project-modal');
 
-    document.querySelectorAll('.open-project-modal').forEach(button => {
-        button.addEventListener('click', () => {
-            const projectId = button.dataset.projectId;
-            const projectContainer = document.getElementById(projectId);
-            if (projectContainer) {
-                const descriptionHtml = projectContainer.querySelector('.project-description-container .project-description').innerHTML;
-                modalProjectDescription.innerHTML = descriptionHtml;
-                projectModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent background scroll
+    if (projectModal && closeModalButton && modalProjectDescription && openProjectModalButtons.length > 0) {
+        openProjectModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.dataset.projectId;
+                const projectContainer = document.getElementById(projectId);
+                if (projectContainer) {
+                    const descriptionHtml = projectContainer.querySelector('.project-description-container .project-description').innerHTML;
+                    if (modalProjectDescription) { // Ensure modalProjectDescription is not null
+                        modalProjectDescription.innerHTML = descriptionHtml;
+                    }
+                    if (projectModal) { // Ensure projectModal is not null
+                        projectModal.classList.remove('hidden');
+                    }
+                    document.body.style.overflow = 'hidden'; // Prevent background scroll
+                }
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            if (projectModal) { // Ensure projectModal is not null
+                projectModal.classList.add('hidden');
+            }
+            document.body.style.overflow = ''; // Restore background scroll
+        });
+
+        projectModal.addEventListener('click', (event) => {
+            if (event.target === projectModal) {
+                if (projectModal) { // Ensure projectModal is not null
+                    projectModal.classList.add('hidden');
+                }
+                document.body.style.overflow = ''; // Restore background scroll
             }
         });
-    });
-
-    closeModalButton.addEventListener('click', () => {
-        projectModal.classList.add('hidden');
-        document.body.style.overflow = ''; // Restore background scroll
-    });
-
-    // Close modal when clicking outside of it
-    projectModal.addEventListener('click', (event) => {
-        if (event.target === projectModal) {
-            projectModal.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore background scroll
-        }
-    });
+    } else {
+        // console.warn("One or more project modal elements not found. Modal functionality will not be initialized on this page.");
+    }
 
     // Load preferred language from localStorage or default to 'es'
     const preferredLang = localStorage.getItem('preferredLang') || 'es';
@@ -203,90 +220,97 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Formspree submission
     const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-    const successAlert = document.getElementById('success-alert');
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const loaderModal = document.getElementById('loader-modal'); // Get loader modal
 
-    async function handleSubmit(event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
+    if (contactForm) { // Check if the contact form exists on the page
+        const formStatus = document.getElementById('form-status');
+        const successAlert = document.getElementById('success-alert');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const loaderModal = document.getElementById('loader-modal');
 
-        // Show loader modal and disable button
-        if (loaderModal) {
-            loaderModal.classList.remove('hidden');
-        }
-        if (submitButton) {
-            submitButton.disabled = true;
-        }
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
 
-        // Set a 3-second timer to hide the loader and re-enable the button
-        setTimeout(() => {
+            // Show loader modal and disable button
             if (loaderModal) {
-                loaderModal.classList.add('hidden');
+                loaderModal.classList.remove('hidden');
             }
             if (submitButton) {
-                submitButton.disabled = false;
+                submitButton.disabled = true;
             }
-        }, 3000);
 
-        fetch(event.target.action, {
-            method: contactForm.method,
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                successAlert.classList.remove('hidden');
-                const currentLang = localStorage.getItem('preferredLang') || 'es';
-                const successTitle = successAlert.querySelector('span[data-translate="contacto.form.exitoTitulo"]');
-                const successMessage = successAlert.querySelector('span[data-translate="contacto.form.exitoMensaje"]');
-                if (translations[currentLang] && translations[currentLang]["contacto.form.exitoTitulo"]) {
-                    successTitle.textContent = translations[currentLang]["contacto.form.exitoTitulo"];
-                }
-                if (translations[currentLang] && translations[currentLang]["contacto.form.exitoMensaje"]) {
-                    successMessage.textContent = translations[currentLang]["contacto.form.exitoMensaje"];
-                }
-
-                contactForm.reset();
-                setTimeout(() => {
-                    successAlert.classList.add('hidden');
-                }, 5000); // Hide success alert after 5 seconds
-            } else {
-                response.json().then(data => {
-                    if (Object.hasOwn(data, 'errors')) {
-                        formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-                    } else {
-                        formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
-                        const currentLang = localStorage.getItem('preferredLang') || 'es';
-                        if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
-                           formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
-                        }
-                    }
-                    // Clear error message after 7 seconds
-                    setTimeout(() => {
-                        formStatus.innerHTML = ''; 
-                    }, 7000);
-                })
-            }
-        }).catch(error => {
-            formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
-            const currentLang = localStorage.getItem('preferredLang') || 'es';
-            if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
-                formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
-            }
-            // Clear error message after 7 seconds
+            // Set a 3-second timer to hide the loader and re-enable the button
             setTimeout(() => {
-                formStatus.innerHTML = ''; 
-            }, 7000);
-        });
-    }
-    contactForm.addEventListener("submit", handleSubmit)
+                if (loaderModal) {
+                    loaderModal.classList.add('hidden');
+                }
+                if (submitButton) {
+                    submitButton.disabled = false;
+                }
+            }, 3000);
+
+            fetch(event.target.action, {
+                method: contactForm.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successAlert.classList.remove('hidden');
+                    const currentLang = localStorage.getItem('preferredLang') || 'es';
+                    const successTitle = successAlert.querySelector('span[data-translate="contacto.form.exitoTitulo"]');
+                    const successMessage = successAlert.querySelector('span[data-translate="contacto.form.exitoMensaje"]');
+                    if (translations[currentLang] && translations[currentLang]["contacto.form.exitoTitulo"]) {
+                        successTitle.textContent = translations[currentLang]["contacto.form.exitoTitulo"];
+                    }
+                    if (translations[currentLang] && translations[currentLang]["contacto.form.exitoMensaje"]) {
+                        successMessage.textContent = translations[currentLang]["contacto.form.exitoMensaje"];
+                    }
+
+                    contactForm.reset();
+                    setTimeout(() => {
+                        successAlert.classList.add('hidden');
+                    }, 5000); // Hide success alert after 5 seconds
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formStatus.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+                            const currentLang = localStorage.getItem('preferredLang') || 'es';
+                            if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
+                               formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
+                            }
+                        }
+                        // Clear error message after 7 seconds
+                        setTimeout(() => {
+                            formStatus.innerHTML = ''; 
+                        }, 7000);
+                    })
+                }
+            }).catch(error => {
+                formStatus.innerHTML = "Oops! Hubo un problema al enviar tu formulario";
+                const currentLang = localStorage.getItem('preferredLang') || 'es';
+                if (translations[currentLang] && translations[currentLang]["contacto.form.errorMensaje"]) {
+                    formStatus.innerHTML = translations[currentLang]["contacto.form.errorMensaje"];
+                }
+                // Clear error message after 7 seconds
+                setTimeout(() => {
+                    formStatus.innerHTML = ''; 
+                }, 7000);
+            });
+        }
+        contactForm.addEventListener("submit", handleSubmit);
+    } // else {
+        // console.warn("Contact form #contact-form not found. Form submission functionality will not be initialized on this page.");
+    // }
 
     // CV Download Functionality
-    if (downloadCvButton) {
-        downloadCvButton.addEventListener('click', () => {
+    // Ensure downloadCvButton is selected within DOMContentLoaded and checked before use
+    const downloadCvButtonFromMainScript = document.getElementById('download-cv-button');
+    if (downloadCvButtonFromMainScript) {
+        downloadCvButtonFromMainScript.addEventListener('click', () => {
             const currentLang = localStorage.getItem('preferredLang') || 'es';
             let cvPath = '';
             if (currentLang === 'es') {
@@ -294,6 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 cvPath = 'docs/Juan_Felipe_Builes_CV_Lider_Producto_EN.pdf';
             }
+            // Create a temporary link to trigger the download
             const link = document.createElement('a');
             link.href = cvPath;
             link.download = cvPath.split('/').pop(); // Extracts filename from path
@@ -302,6 +327,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
         });
     } else {
-        console.error("Download CV button #download-cv-button not found!");
+        // console.warn("Download CV button #download-cv-button not found in script.js context!");
     }
 });

@@ -42,7 +42,7 @@ const translations = {
         "experiencia.iris.empresaFecha": "Iris CF | Junio 2022 – Abril 2024",
         "experiencia.iris.descripcion": "Facilité la entrega continua de productos y funcionalidades alineadas con los objetivos de negocio, asegurando cumplimiento en tiempos y calidad. Impulsé la adopción y mejora de metodologías ágiles como Scrum, Kanban y SAFe, optimizando la organización de sprints y el uso de métricas para la toma de decisiones. Además, actué como puente entre equipos técnicos, de producto y negocio, fortaleciendo la comunicación y acelerando la resolución de problemas.",
         "experiencia.pactia.cargo": "Web Master",
-        "experiencia.pactia.empresaFecha": "Pactia SAS | Marzo 2021 – Septiembre 2015",
+        "experiencia.pactia.empresaFecha": "Pactia SAS | Septiembre 2015 – Marzo 2021",
         "experiencia.pactia.descripcion": "Como Product Owner, gestioné el contenido y la actualización de las páginas de la empresa, asegurando estabilidad durante cada implementación. Lideré la creación y optimización de landing pages con foco en conversión, aplicando mejoras continuas en frontend y backend. Además, llevé a cabo auditorías técnicas y acciones de SEO que fortalecieron el posicionamiento orgánico y aumentaron la visibilidad de la marca en buscadores.",
         "experiencia.verProyecto": "Ver Proyecto",
 
@@ -157,6 +157,7 @@ const translations = {
         "educacion.certificaciones.smpc": "El Certificado Profesional Scrum Master (SMPC)",
         "educacion.certificaciones.spopc": "Scrum Product Owner Professional Certificate (SPOPC)",
         "educacion.certificaciones.formacionContinua": "+ Formación continua en Platzi (Product Management, Growth...)",
+        "educacion.platziCursos": "Mis Certificados de Platzi",
 
         // Testimonials Section (Testimonios)
         "testimonios.titulo": "Lo que dicen de mi trabajo",
@@ -242,7 +243,7 @@ const translations = {
         "experiencia.iris.empresaFecha": "Iris CF | June 2022 – April 2024",
         "experiencia.iris.descripcion": "I facilitated the continuous delivery of products and features aligned with business objectives, ensuring compliance in time and quality. I promoted the adoption and improvement of agile methodologies such as Scrum, Kanban, and SAFe, optimizing sprint organization and the use of metrics for decision-making. Additionally, I acted as a bridge between technical, product, and business teams, strengthening communication and accelerating problem resolution.",
         "experiencia.pactia.cargo": "Web Master",
-        "experiencia.pactia.empresaFecha": "Pactia SAS | March 2021 – September 2015",
+        "experiencia.pactia.empresaFecha": "Pactia SAS | September 2015 – March 2021",
         "experiencia.pactia.descripcion": "As Product Owner, I managed the content and updating of the company\'s pages, ensuring stability during each implementation. I led the creation and optimization of landing pages focused on conversion, applying continuous improvements in frontend and backend. Additionally, I conducted technical audits and SEO actions that strengthened organic positioning and increased brand visibility in search engines.",
         "experiencia.verProyecto": "View Project",
 
@@ -356,7 +357,8 @@ const translations = {
         "educacion.certificaciones.titulo": "Key Certifications",
         "educacion.certificaciones.smpc": "Scrum Master Professional Certificate (SMPC)",
         "educacion.certificaciones.spopc": "Scrum Product Owner Professional Certificate (SPOPC)",
-        "educacion.certificaciones.formacionContinua": "+ Continuous training on Platzi (Product Management, Growth...)",
+        "educacion.certificaciones.formacionContinua": "+ Continuous training at Platzi (Product Management, Growth...)",
+        "educacion.platziCursos": "My Platzi Certificates",
 
         // Testimonials Section (Testimonios)
         "testimonios.titulo": "What they say about my work",
