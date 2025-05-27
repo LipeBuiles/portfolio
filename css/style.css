@@ -301,3 +301,19 @@
     color: #e0e0e0;
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+/* Responsive styles for blog post images */
+@media (max-width: 767px) { /* Tailwind's 'md' breakpoint is 768px, so use slightly less */
+    .blog-post-image {
+        width: 100% !important; /* Force full width */
+        height: auto !important; /* Maintain aspect ratio */
+        max-height: 200px; /* Optional: prevent excessively tall images */
+        object-fit: cover; /* Ensure it covers the area, might crop */
+    }
+
+    /* Adjust the container of the image if it's constraining the width */
+    /* This assumes the parent div of the image is the one with md:w-1/6 */
+    .blog-post-image-container {
+        width: 100% !important; /* Allow image container to be full width on mobile */
+    }
+}

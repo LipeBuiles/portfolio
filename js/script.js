@@ -66,17 +66,25 @@ document.addEventListener('DOMContentLoaded', () => {
     langEnButton.addEventListener('click', () => setLanguage('en'));
 
     // Initialize AOS (Animate on Scroll)
-    AOS.init({
-        duration: 800, // Animation duration
-        once: false, // Animation happens every time you scroll
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800, // Animation duration
+            once: false, // Animation happens every time you scroll
+        });
+    } else {
+        console.warn('AOS library not found, animations will not be initialized.');
+    }
 
     // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    if (mobileMenuButton && mobileMenu) { // Check if elements exist
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    } else {
+        // console.warn('Mobile menu button or mobile menu not found. Menu toggle functionality will not be initialized on this page.');
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

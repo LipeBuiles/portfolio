@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/locales.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -48,74 +47,10 @@
     </nav>
 
     <main class="container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold mb-8 text-center" data-translate="blog.titulo">Mis Publicaciones</h1>
+        <h1 class="text-4xl font-bold mb-8 text-center text-text-dark dark:text-text-light" data-translate="blog.titulo">Mis Publicaciones</h1>
         
-        <div class="space-y-6">
-            <!-- Post 1 -->
-            <article class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-5/6">
-                        <h2 class="text-2xl font-semibold mb-2">
-                            <a href="https://medium.com/@lipebuiles/entre-el-pulso-y-la-pausa-redefiniendo-el-%C3%A9xito-desde-lo-humano-dc4c65cf7d1b" target="_blank" class="text-primary hover:underline" data-translate="blog.post1.titulo">
-                                Entre el pulso y la pausa: Redefiniendo el éxito desde lo humano
-                            </a>
-                        </h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4"><span data-translate="blog.post1.fechaLabel">Fecha de publicación:</span> 11 de Mayo de 2025</p>
-                        <p class="text-text-dark dark:text-bg-light" data-translate="blog.post1.resumen">
-                            Una reflexión sobre cómo encontrar un equilibrio más humano y sostenible en nuestra búsqueda del éxito, yendo más allá de las métricas tradicionales.
-                        </p>
-                        <a href="https://medium.com/@lipebuiles/entre-el-pulso-y-la-pausa-redefiniendo-el-%C3%A9xito-desde-lo-humano-dc4c65cf7d1b" target="_blank" class="inline-block mt-4 text-accent hover:underline" data-translate="blog.leerMas">Leer más &rarr;</a>
-                    </div>
-                    <div class="md:w-1/6">
-                        <img src="img/pulso.png" alt="Imagen del post Entre el pulso y la pausa" class="w-full h-auto rounded-lg shadow-md">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Post 2 -->
-            <article class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-5/6">
-                        <h2 class="text-2xl font-semibold mb-2">
-                            <a href="https://medium.com/@lipebuiles/zona-2-el-arte-de-avanzar-sin-correr-8608340079ec" target="_blank" class="text-primary hover:underline" data-translate="blog.post2.titulo">
-                                Zona 2: El arte de avanzar sin correr
-                            </a>
-                        </h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4"><span data-translate="blog.post2.fechaLabel">Fecha de publicación:</span> 18 de Mayo de 2025</p>
-                        <p class="text-text-dark dark:text-bg-light" data-translate="blog.post2.resumen">
-                            Descubre cómo el entrenamiento en Zona 2 puede ser la clave para mejorar tu resistencia, salud y bienestar general, sin necesidad de llegar al agotamiento.
-                        </p>
-                        <a href="https://medium.com/@lipebuiles/zona-2-el-arte-de-avanzar-sin-correr-8608340079ec" target="_blank" class="inline-block mt-4 text-accent hover:underline" data-translate="blog.leerMas">Leer más &rarr;</a>
-                    </div>
-                    <div class="md:w-1/6">
-                        <img src="img/run.jpeg" alt="Imagen del post Zona 2: El arte de avanzar sin correr" class="w-full h-auto rounded-lg shadow-md">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Post 3 -->
-            <article class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-                <div class="flex flex-col md:flex-row gap-4">
-                    <div class="md:w-5/6">
-                        <h2 class="text-2xl font-semibold mb-2">
-                            <a href="https://medium.com/@lipebuiles/cuando-liderar-tambi%C3%A9n-es-desaparecer-849d4af41e79" target="_blank" class="text-primary hover:underline" data-translate="blog.post3.titulo">
-                                Cuando liderar también es desaparecer
-                            </a>
-                        </h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4"><span data-translate="blog.post3.fechaLabel">Fecha de publicación:</span> 25 de Mayo de 2025</p>
-                        <p class="text-text-dark dark:text-bg-light" data-translate="blog.post3.resumen">
-                            Esta semana no fue fácil. Una de esas en las que el café sabe a rutina, las reuniones a fuego cruzado, y cada “¿cómo vamos?” esconde una pequeña tormenta...
-                        </p>
-                        <a href="https://medium.com/@lipebuiles/cuando-liderar-tambi%C3%A9n-es-desaparecer-849d4af41e79" target="_blank" class="inline-block mt-4 text-accent hover:underline" data-translate="blog.leerMas">Leer más &rarr;</a>
-                    </div>
-                    <div class="md:w-1/6">
-                        <img src="img/team.jpeg" alt="Imagen del post Cuando liderar también es desaparecer" class="w-full h-auto rounded-lg shadow-md object-cover aspect-[4/3]">
-                    </div>
-                </div>
-            </article>
-
-            <!-- Agrega más artículos aquí -->
-
+        <div id="blog-posts-container" class="space-y-6">
+            <!-- Blog posts will be dynamically inserted here by blog_script.js -->
         </div>
     </main>
 

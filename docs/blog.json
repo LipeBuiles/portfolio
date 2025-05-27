@@ -1,0 +1,41 @@
+[
+  {
+    "id": "post1",
+    "link": "https://medium.com/@lipebuiles/cuando-liderar-tambi%C3%A9n-es-desaparecer-849d4af41e79",
+    "image": "img/team.jpeg",
+    "imageAltEs": "Equipo trabajando colaborativamente",
+    "imageAltEn": "Team working collaboratively",
+    "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
+    "date": "2024-07-25",
+    "titleEs": "Cuando liderar también es desaparecer",
+    "titleEn": "When leading is also disappearing",
+    "summaryEs": "A veces, la mejor forma de liderar es dar un paso atrás y permitir que el equipo brille. Este post explora la importancia de la autonomía y la confianza en el liderazgo.",
+    "summaryEn": "Sometimes the best way to lead is to step back and allow the team to shine. This post explores the importance of autonomy and trust in leadership."
+  },
+  {
+    "id": "post2",
+    "link": "https://medium.com/@lipebuiles/zona-2-el-arte-de-avanzar-sin-correr-8608340079ec",
+    "image": "img/run.jpeg",
+    "imageAltEs": "Persona corriendo en una pista",
+    "imageAltEn": "Person running on a track",
+    "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
+    "date": "2024-06-15",
+    "titleEs": "Zona 2: El Arte de Avanzar sin Correr",
+    "titleEn": "Zone 2: The Art of Advancing without Sprinting",
+    "summaryEs": "Explora cómo el entrenamiento en Zona 2 puede mejorar la resistencia y el rendimiento a largo plazo, aplicando principios similares al desarrollo personal y profesional.",
+    "summaryEn": "Explore how Zone 2 training can improve endurance and long-term performance, applying similar principles to personal and professional development."
+  },
+  {
+    "id": "post3",
+    "link": "https://medium.com/@lipebuiles/entre-el-pulso-y-la-pausa-redefiniendo-el-%C3%A9xito-desde-lo-humano-dc4c65cf7d1b",
+    "image": "img/pulso.png",
+    "imageAltEs": "Persona meditando con un monitor de pulso",
+    "imageAltEn": "Person meditating with a heart rate monitor",
+    "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
+    "date": "2024-05-20",
+    "titleEs": "Entre el Pulso y la Pausa: Redefiniendo el Éxito",
+    "titleEn": "Between Pulse and Pause: Redefining Success",
+    "summaryEs": "Una reflexión sobre encontrar el equilibrio entre el esfuerzo constante y la necesidad de descanso para un éxito sostenible y humano.",
+    "summaryEn": "A reflection on finding the balance between constant effort and the need for rest for sustainable and humane success."
+  }
+]
