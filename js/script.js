@@ -82,6 +82,30 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Close mobile menu when a link or button inside it is clicked
+        mobileMenu.addEventListener('click', (event) => {
+            // Check if the clicked element is a link or a button
+            if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON' || event.target.closest('A') || event.target.closest('BUTTON')) {
+                // For anchor links, smooth scroll is handled by the other event listener,
+                // but we still want to close the menu.
+                // For other links/buttons (like Blog, CV, lang, theme), it will navigate/act and close.
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            // If menu is open AND click is not on the button (or its children) AND click is not inside the menu (or its children)
+            if (!mobileMenu.classList.contains('hidden') &&
+                !mobileMenuButton.contains(event.target) &&
+                !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
     } else {
         // console.warn('Mobile menu button or mobile menu not found. Menu toggle functionality will not be initialized on this page.');
     }
@@ -97,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
-            // Close mobile menu after clicking a link
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
+            // The menu closing is now handled by the more general click listener on mobileMenu
+            // if (!mobileMenu.classList.contains('hidden')) {
+            //     mobileMenu.classList.add('hidden');
+            // }
         });
     });
 
