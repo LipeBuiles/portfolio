@@ -43,56 +43,63 @@
 
 <body>
     <nav id="main-nav" class="bg-white dark:bg-bg-dark shadow-sm sticky top-0 z-50 transition-colors duration-300 ease-in-out">
-        <div class="container mx-auto px-4 py-0 flex justify-between items-center">
-            <a class="font-bold text-xl text-primary" href="#">JFB</a>
-            <button id="mobile-menu-button" class="md:hidden block text-text-dark dark:text-bg-light focus:outline-none">
+        <div class="container mx-auto px-4 py-2 relative flex flex-wrap items-center">
+            <!-- Logo positioned absolute on mobile, static on desktop -->
+            <a class="font-bold text-xl text-primary absolute left-4 top-2 lg:static lg:mr-4" href="#">JFB</a>
+            
+            <!-- Mobile menu button positioned absolute -->
+            <button id="mobile-menu-button" class="lg:hidden block text-text-dark dark:text-bg-light focus:outline-none absolute right-4 top-2">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
                     </path>
                 </svg>
             </button>
-            <div id="mobile-menu" class="hidden absolute top-full left-[-1.5rem] w-screen bg-white dark:bg-bg-dark shadow-lg pt-0 pb-4 px-2 flex flex-col space-y-4 items-center md:mt-0 md:flex md:static md:left-auto md:w-auto md:bg-transparent dark:md:bg-transparent md:shadow-none md:p-0 md:space-x-4 md:items-center">
-                <ul class="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row md:items-center md:space-x-4 md:mt-0">
-                    <li>
-                        <a class="block py-2 md:py-2 text-primary hover:text-primary/80" href="#inicio" data-translate="nav.inicio">Inicio</a>
+            
+            <!-- Mobile menu and navigation -->
+            <div id="mobile-menu" class="hidden w-full lg:flex lg:items-center lg:w-auto lg:ml-auto">
+                <ul class="lg:flex items-center justify-center space-y-2 lg:space-y-0 lg:space-x-6 mt-4 lg:mt-0">
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-primary hover:text-primary/80 text-sm lg:text-base text-center mx-auto" href="#inicio" data-translate="nav.inicio">Inicio</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="#sobre-mi" data-translate="nav.sobreMi">Sobre mí</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="#sobre-mi" data-translate="nav.sobreMi">Sobre mí</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary"
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto"
                             href="#experiencia" data-translate="nav.experiencia">Experiencia</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="#proyectos" data-translate="nav.proyectos">Proyectos</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="#proyectos" data-translate="nav.proyectos">Proyectos</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary"
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto"
                             href="#habilidades" data-translate="nav.habilidades">Habilidades</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="#educacion" data-translate="nav.educacion">Educación</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="#educacion" data-translate="nav.educacion">Educación</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="#testimonios" data-translate="nav.testimonios">Testimonios</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="#testimonios" data-translate="nav.testimonios">Testimonios</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="#contacto" data-translate="nav.contacto">Contacto</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="#contacto" data-translate="nav.contacto">Contacto</a>
                     </li>
-                    <li>
-                        <a class="block py-2 md:py-2 text-text-dark dark:text-bg-light hover:text-primary" href="blog.html" target="_blank" data-translate="nav.blog">Blog</a>
+                    <li class="text-center">
+                        <a class="px-2 py-1 block text-text-dark dark:text-bg-light hover:text-primary text-sm lg:text-base text-center mx-auto" href="blog.html" target="_blank" data-translate="nav.blog">Blog</a>
                     </li>
                 </ul>
-                <div class="flex flex-col space-y-2 items-center justify-center md:flex-row md:items-center md:space-y-0 md:space-x-2 md:ml-4 md:-translate-y-1.5">
-                    <button id="lang-es" class="px-3 py-2 text-sm rounded bg-primary text-white hover:bg-primary/90 w-full md:w-auto">ES</button>
-                    <button id="lang-en" class="px-3 py-2 text-sm rounded bg-gray-200 text-text-dark hover:bg-gray-300 dark:bg-gray-700 dark:text-bg-light dark:hover:bg-gray-600 w-full md:w-auto">EN</button>
-                    <button id="theme-toggle" class="mt-2 md:mt-0 md:ml-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center justify-center">
-                        <span id="theme-toggle-light-icon" class="material-symbols-outlined text-yellow-500">light_mode</span>
-                        <span id="theme-toggle-dark-icon" class="material-symbols-outlined text-gray-300 hidden">dark_mode</span>
+                
+                <!-- Language and theme controls -->
+                <div class="flex items-center justify-center lg:justify-end space-x-2 mt-4 lg:mt-0 lg:ml-12">
+                    <button id="lang-es" class="px-2 py-1 text-xs lg:text-sm rounded bg-primary text-white hover:bg-primary/90">ES</button>
+                    <button id="lang-en" class="px-2 py-1 text-xs lg:text-sm rounded bg-gray-200 text-text-dark hover:bg-gray-300 dark:bg-gray-700 dark:text-bg-light dark:hover:bg-gray-600">EN</button>
+                    <button id="theme-toggle" class="p-1 lg:p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 flex items-center justify-center">
+                        <span id="theme-toggle-light-icon" class="material-symbols-outlined text-yellow-500 text-sm lg:text-base">light_mode</span>
+                        <span id="theme-toggle-dark-icon" class="material-symbols-outlined text-gray-300 hidden text-sm lg:text-base">dark_mode</span>
                     </button>
-                    <button id="download-cv-button" class="mt-2 md:mt-0 md:ml-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center justify-center text-accent dark:text-accent hover:text-accent/80 dark:hover:text-accent/80">
-                        <span class="material-symbols-outlined">download</span>
+                    <button id="download-cv-button" class="p-1 lg:p-2 rounded-md focus:outline-none focus:ring-1 focus:ring-gray-500 flex items-center justify-center text-accent dark:text-accent hover:text-accent/80 dark:hover:text-accent/80">
+                        <span class="material-symbols-outlined text-sm lg:text-base">download</span>
                     </button>
                 </div>
             </div>
