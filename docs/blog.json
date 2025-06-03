@@ -1,5 +1,18 @@
 [
   {
+    "id": "post0",
+    "link": "https://medium.com/@lipebuiles/la-ia-no-reemplaza-a-los-product-managers-la-ignorancia-s%C3%AD-12cde51b4dff",
+    "image": "img/piloto.png",
+    "imageAltEs": "Piloto en cabina de avión, simbolizando el balance entre automatización y control humano",
+    "imageAltEn": "Pilot in aircraft cockpit, symbolizing the balance between automation and human control",
+    "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
+    "date": "2025-06-02",
+    "titleEs": "🤖 La IA no reemplaza a los Product Managers. La ignorancia, sí.",
+    "titleEn": "🤖 AI Doesn't Replace Product Managers. Ignorance Does.",
+    "summaryEs": "El temor se repite en reuniones, artículos y podcasts: 'La inteligencia artificial va a reemplazar a los Product Managers.' Y cada vez que lo escucho, pienso en un avión. En ese avión donde el piloto automático vuela por horas, pero aún así hay un piloto y un copiloto al mando.",
+    "summaryEn": "The fear repeats in meetings, articles, and podcasts: 'Artificial intelligence will replace Product Managers.' And every time I hear it, I think of an airplane. That airplane where the autopilot flies for hours, yet there's still a pilot and co-pilot in command."
+  },
+  {
     "id": "post1",
     "link": "https://medium.com/@lipebuiles/cuando-liderar-tambi%C3%A9n-es-desaparecer-849d4af41e79",
     "image": "img/team.jpeg",
