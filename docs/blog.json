@@ -19,7 +19,7 @@
     "imageAltEs": "Equipo trabajando colaborativamente",
     "imageAltEn": "Team working collaboratively",
     "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
-    "date": "2024-07-25",
+    "date": "2025-05-25",
     "titleEs": "Cuando liderar también es desaparecer",
     "titleEn": "When leading is also disappearing",
     "summaryEs": "A veces, la mejor forma de liderar es dar un paso atrás y permitir que el equipo brille. Este post explora la importancia de la autonomía y la confianza en el liderazgo.",
@@ -32,7 +32,7 @@
     "imageAltEs": "Persona corriendo en una pista",
     "imageAltEn": "Person running on a track",
     "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
-    "date": "2024-06-15",
+    "date": "2025-05-18",
     "titleEs": "Zona 2: El Arte de Avanzar sin Correr",
     "titleEn": "Zone 2: The Art of Advancing without Sprinting",
     "summaryEs": "Explora cómo el entrenamiento en Zona 2 puede mejorar la resistencia y el rendimiento a largo plazo, aplicando principios similares al desarrollo personal y profesional.",
@@ -45,7 +45,7 @@
     "imageAltEs": "Persona meditando con un monitor de pulso",
     "imageAltEn": "Person meditating with a heart rate monitor",
     "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
-    "date": "2024-05-20",
+    "date": "2025-05-11",
     "titleEs": "Entre el Pulso y la Pausa: Redefiniendo el Éxito",
     "titleEn": "Between Pulse and Pause: Redefining Success",
     "summaryEs": "Una reflexión sobre encontrar el equilibrio entre el esfuerzo constante y la necesidad de descanso para un éxito sostenible y humano.",
@@ -63,5 +63,18 @@
     "titleEn": "5 Years Later: Why It's Time to Refresh the Scrum Guide",
     "summaryEs": "Hace cinco años se lanzó la guía Scrum 2020, reducida y simplificada para abarcar más industrias. Desde esa fecha, aunque se han acumulado mejoras, no ha habido una actualización oficial. Scrum nació como respuesta a lo complejo. Hoy, con una guía de 13 páginas pero sin actualizar desde 2020, corre el riesgo de volverse irrelevante sin soporte práctico actualizado.",
     "summaryEn": "Five years ago, the 2020 Scrum Guide was launched, reduced and simplified to cover more industries. Since then, although improvements have accumulated, there has been no official update. Scrum was born as a response to complexity. Today, with a 13-page guide outdated since 2020, it risks becoming irrelevant without updated practical support."
+  },
+  {
+    "id": "post4",
+    "link": "https://medium.com/@lipebuiles/pensar-antes-de-creer-desinformación-polarización-y-el-valor-del-criterio-propio-c2ae212c43c4",
+    "image": "img/informacion.png",
+    "imageAltEs": "Imagen sobre información y criterio",
+    "imageAltEn": "Image about information and criterion",
+    "imageStyle": "height: 160px; width: 240px; object-fit: cover;",
+    "date": "2025-06-15",
+    "titleEs": "Pensar antes de creer: desinformación, polarización y el valor del criterio propio",
+    "titleEn": "Think before believing: disinformation, polarization and the value of own criteria",
+    "summaryEs": "En la era de la infoxicación, es crucial desarrollar un criterio propio para navegar la desinformación y la polarización. Este artículo explora cómo hacerlo.",
+    "summaryEn": "In the age of infoxication, it is crucial to develop one's own criteria to navigate disinformation and polarization. This article explores how to do it."
   }
 ]
