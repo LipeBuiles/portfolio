@@ -1,5 +1,21 @@
 [
   {
+    "imagen": "img/pmm.png",
+    "nombre": "Curso de Product Management para Mobile",
+    "nombre_en": "Product Management Course for Mobile",
+    "fecha_aprobacion": "Aprobado el 28 de julio, 2025",
+    "fecha_aprobacion_en": "Approved on July 28, 2025",
+    "link": "https://platzi.com/p/LipeBuiles/curso/11455-course/diploma/detalle/"
+  },
+  {
+    "imagen": "img/apw.png",
+    "nombre": "Curso de Automatización de Test con Playwright",
+    "nombre_en": "Test Automation Course with Playwright",
+    "fecha_aprobacion": "Aprobado el 12 de julio, 2025",
+    "fecha_aprobacion_en": "Approved on July 12, 2025",
+    "link": "https://platzi.com/p/LipeBuiles/curso/5679-course/diploma/detalle/"
+  },
+  {
     "imagen": "img/11967.jpeg",
     "nombre": "Curso de Gestión de Proyectos con Jira",
     "nombre_en": "Project Management with Jira Course",

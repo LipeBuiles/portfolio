@@ -41,8 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn(`Translation not found for key: ${fullKey} (resolved to ${actualKey}) in language: ${lang}`);
             }
         });
+        
+        // Handle placeholder translations
+        document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-translate-placeholder');
+            if (translations[lang] && translations[lang].hasOwnProperty(key)) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+        
         htmlEl.setAttribute('lang', lang); // Update the lang attribute of the <html> tag
     }
+
+    // Make updateTexts available globally for use in other scripts like blog_script.js
+    window.updateTranslations = updateTexts;
 
     // Function to set the language
     function setLanguage(lang) {

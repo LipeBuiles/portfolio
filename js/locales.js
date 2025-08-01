@@ -192,6 +192,10 @@ const translations = {
 
         // Blog Page
         "blog.titulo": "Mis Publicaciones",
+        "blog.buscar": "Buscar publicaciones...",
+        "blog.noResultados": "No se encontraron publicaciones",
+        "blog.intentaOtroBusqueda": "Intenta con otros términos de búsqueda",
+        "blog.resultados": "resultado(s) encontrado(s)",
         "blog.publicationDateLabel": "Fecha de publicación:",
         "blog.leerMas": "Leer más &rarr;",
         "blog.post1.titulo": "Entre el pulso y la pausa: Redefiniendo el éxito desde lo humano",
@@ -394,6 +398,10 @@ const translations = {
 
         // Blog Page
         "blog.titulo": "My Publications",
+        "blog.buscar": "Search posts...",
+        "blog.noResultados": "No posts found",
+        "blog.intentaOtroBusqueda": "Try different search terms",
+        "blog.resultados": "result(s) found",
         "blog.publicationDateLabel": "Publication date:",
         "blog.leerMas": "Read more &rarr;",
         "blog.post1.titulo": "Between the pulse and the pause: Redefining success from a human perspective",

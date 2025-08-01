@@ -35,7 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Blog posts functionality
             const blogPostsContainer = document.getElementById('blog-posts-container');
+            const searchInput = document.getElementById('blog-search');
+            const clearSearchButton = document.getElementById('clear-search');
+            const searchResultsInfo = document.getElementById('search-results-info');
+            const searchResultsCount = document.getElementById('search-results-count');
+            const noResultsMessage = document.getElementById('no-results-message');
             let allPosts = [];
+            let filteredPosts = [];
 
             // Function to format date string (YYYY-MM-DD) into a localized, readable format
             function getFormattedDate(dateString, lang) {
@@ -52,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     allPosts = await response.json();
                     allPosts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Sort by date DESC
-                    renderBlogPosts(localStorage.getItem('language') || 'es');
+                    filteredPosts = [...allPosts]; // Initialize filtered posts with all posts
+                    renderFilteredPosts(localStorage.getItem('language') || 'es');
                 } catch (error) {
                     console.error("Could not fetch blog posts:", error);
                     if (blogPostsContainer) {
@@ -62,54 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function renderBlogPosts(lang) {
-                if (!blogPostsContainer || !allPosts.length) return;
-
-                blogPostsContainer.innerHTML = ''; // Clear existing posts
-
-                allPosts.forEach(post => {
-                    const article = document.createElement('article');
-                    // Preserving original classes for the article element as per blog.html structure
-                    article.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6';
-                    // data-aos attribute can be added if AOS library is in use and initialized elsewhere
-                    // article.setAttribute('data-aos', 'fade-up'); 
-
-                    const title = lang === 'en' ? post.titleEn : post.titleEs;
-                    const summary = lang === 'en' ? post.summaryEn : post.summaryEs;
-                    const imageAlt = lang === 'en' ? post.imageAltEn : post.imageAltEs;
-                    const formattedDate = getFormattedDate(post.date, lang);
-                    
-                    const publicationDateLabelText = translations[lang]['blog.publicationDateLabel'] || (lang === 'en' ? 'Publication date:' : 'Fecha de publicación:');
-                    const readMoreText = translations[lang]['blog.leerMas'] || (lang === 'en' ? 'Read more &rarr;' : 'Leer más &rarr;');
-
-                    // Replicating the original HTML structure for each post
-                    article.innerHTML = `
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="md:w-5/6">
-                                <h2 class="text-2xl font-semibold mb-2">
-                                    <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
-                                        ${title}
-                                </a>
-                                </h2>
-                                <p class="text-gray-600 dark:text-gray-400 mb-4">
-                                    <span>${publicationDateLabelText}</span> ${formattedDate}
-                                </p>
-                                <p class="text-text-dark dark:text-bg-light">${summary}</p>
-                                <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-accent hover:underline">
-                                    ${readMoreText}
-                                </a>
-                            </div>
-                            <div class="md:w-1/6 blog-post-image-container">
-                                <img src="${post.image}" alt="${imageAlt}" class="rounded-lg shadow-md blog-post-image" style="${post.imageStyle}">
-                            </div>
-                        </div>
-                    `;
-                    blogPostsContainer.appendChild(article);
-                });
-                // It's important that updateTranslations is called AFTER posts are rendered if it affects static text on the page.
-                // However, since we are injecting translated content directly, this might only be needed for other static elements.
-                if (typeof updateTranslations === 'function') {
-                    updateTranslations(lang);
-                }
+                filteredPosts = [...allPosts];
+                renderFilteredPosts(lang, '');
             }
 
             // Language toggle
@@ -121,7 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (typeof updateTranslations === 'function') {
                      updateTranslations(lang); // Update static text first
                 }
-                renderBlogPosts(lang); // Re-render blog posts with the new language
+                
+                // Preserve current search state
+                const currentSearch = searchInput ? searchInput.value : '';
+                if (currentSearch.trim()) {
+                    performSearch(currentSearch); // Re-search with current query in new language
+                } else {
+                    renderBlogPosts(lang); // Re-render all posts with the new language
+                }
 
                 // Update button styles (ensure these classes match your Tailwind config and HTML)
                 if (lang === 'es') {
@@ -158,3 +126,131 @@ document.addEventListener('DOMContentLoaded', () => {
                 langEnButton.addEventListener('click', () => setLanguage('en'));
             }
         });
+
+        // Blog posts functionality
+            const blogPostsContainer = document.getElementById('blog-posts-container');
+            const searchInput = document.getElementById('blog-search');
+            const clearSearchButton = document.getElementById('clear-search');
+            const searchResultsInfo = document.getElementById('search-results-info');
+            const searchResultsCount = document.getElementById('search-results-count');
+            const noResultsMessage = document.getElementById('no-results-message');
+            let allPosts = [];
+            let filteredPosts = [];
+
+            // Function to highlight search terms
+            function highlightSearchTerm(text, searchTerm) {
+                if (!searchTerm.trim()) return text;
+                
+                const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+                return text.replace(regex, '<mark class="bg-yellow-200 dark:bg-yellow-600 dark:text-black rounded px-1">$1</mark>');
+            }
+
+            // Enhanced search functionality with better matching
+            function performSearch(query) {
+                const lang = localStorage.getItem('language') || 'es';
+                
+                if (!query.trim()) {
+                    filteredPosts = [...allPosts];
+                    searchResultsInfo.classList.add('hidden');
+                    clearSearchButton.classList.add('hidden');
+                } else {
+                    const searchTerms = query.toLowerCase().trim().split(/\s+/);
+                    
+                    filteredPosts = allPosts.filter(post => {
+                        const title = lang === 'en' ? post.titleEn : post.titleEs;
+                        const summary = lang === 'en' ? post.summaryEn : post.summaryEs;
+                        const searchableContent = (title + ' ' + summary).toLowerCase();
+                        
+                        // Check if all search terms are found in the content
+                        return searchTerms.every(term => searchableContent.includes(term));
+                    });
+                    
+                    // Show/hide search results info
+                    const resultsText = translations[lang]['blog.resultados'] || 'resultado(s) encontrado(s)';
+                    searchResultsCount.textContent = `${filteredPosts.length} ${resultsText}`;
+                    searchResultsInfo.classList.remove('hidden');
+                    clearSearchButton.classList.remove('hidden');
+                }
+                
+                renderFilteredPosts(lang, query.trim());
+            }
+
+            function renderFilteredPosts(lang, searchTerm = '') {
+                if (!blogPostsContainer) return;
+
+                blogPostsContainer.innerHTML = '';
+                
+                if (filteredPosts.length === 0) {
+                    noResultsMessage.classList.remove('hidden');
+                } else {
+                    noResultsMessage.classList.add('hidden');
+                    
+                    filteredPosts.forEach(post => {
+                        const article = document.createElement('article');
+                        article.className = 'bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6';
+
+                        const title = lang === 'en' ? post.titleEn : post.titleEs;
+                        const summary = lang === 'en' ? post.summaryEn : post.summaryEs;
+                        const imageAlt = lang === 'en' ? post.imageAltEn : post.imageAltEs;
+                        const formattedDate = getFormattedDate(post.date, lang);
+                        
+                        const publicationDateLabelText = translations[lang]['blog.publicationDateLabel'] || (lang === 'en' ? 'Publication date:' : 'Fecha de publicación:');
+                        const readMoreText = translations[lang]['blog.leerMas'] || (lang === 'en' ? 'Read more &rarr;' : 'Leer más &rarr;');
+
+                        // Highlight search terms in title and summary
+                        const highlightedTitle = highlightSearchTerm(title, searchTerm);
+                        const highlightedSummary = highlightSearchTerm(summary, searchTerm);
+
+                        article.innerHTML = `
+                            <div class="flex flex-col md:flex-row gap-4">
+                                <div class="md:w-5/6">
+                                    <h2 class="text-2xl font-semibold mb-2">
+                                        <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+                                            ${highlightedTitle}
+                                        </a>
+                                    </h2>
+                                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                        <span>${publicationDateLabelText}</span> ${formattedDate}
+                                    </p>
+                                    <p class="text-text-dark dark:text-bg-light">${highlightedSummary}</p>
+                                    <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-accent hover:underline">
+                                        ${readMoreText}
+                                    </a>
+                                </div>
+                                <div class="md:w-1/6 blog-post-image-container">
+                                    <img src="${post.image}" alt="${imageAlt}" class="rounded-lg shadow-md blog-post-image" style="${post.imageStyle}">
+                                </div>
+                            </div>
+                        `;
+                        blogPostsContainer.appendChild(article);
+                    });
+                }
+                
+                if (typeof updateTranslations === 'function') {
+                    updateTranslations(lang);
+                }
+            }
+
+            // Search event listeners
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    performSearch(e.target.value);
+                });
+                
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        performSearch(e.target.value);
+                    }
+                });
+            }
+
+            if (clearSearchButton) {
+                clearSearchButton.addEventListener('click', () => {
+                    searchInput.value = '';
+                    performSearch('');
+                });
+            }
+
+            // Original variables and functions
+            // let allPosts = []; // Already declared above
