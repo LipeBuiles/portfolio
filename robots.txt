@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://juanfelipebuiles.com/sitemap.xml
+
+# Disallow crawling of placeholder images and temporary files
+Disallow: /placeholder-photo.jpeg
+
+# Allow crawling of CSS and JS files for better page rendering
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Crawl delay (optional - sets delay between requests in seconds)
+Crawl-delay: 1
