@@ -1,4 +1,12 @@
 [
+    {
+    "imagen": "img/12123.png",
+    "nombre": "Curso de Fundamentos de PHP",
+    "nombre_en": "PHP Fundamentals Course",
+    "fecha_aprobacion": "Aprobado el 2 de octubre, 2025",
+    "fecha_aprobacion_en": "Approved on October 2, 2025",
+    "link": "https://platzi.com/p/LipeBuiles/curso/12123-fundamentos-php/diploma/detalle/"
+  },
   {
     "imagen": "img/pmm.png",
     "nombre": "Curso de Product Management para Mobile",
